@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/styles": "^4.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "typeface-itim": "^0.0.72",
+    "typeface-karla": "^0.0.72",
+    "typeface-montserrat": "^0.0.75",
+    "typeface-muli": "^0.0.71"
   },
   "scripts": {
     "start": "react-scripts start",
