@@ -12,6 +12,7 @@ import 'typeface-montserrat';
 import './App.css';
 
 import LandingPage from './LandingPage';
+import AboutMe from './about';
 import CPACS from './projects/CPACS';
 import Packages from './projects/Packages';
 import Scribble from './projects/Scribble';
@@ -60,7 +61,7 @@ function App() {
       <Router>
         <Route exact path="/" component={LandingPage} />
         <Route path="/work" component={null} />
-        <Route path="/aboutme" component={null} />
+        <Route path="/about" component={AboutMe} />
         <Route path={CPACS.PROJECT_LINK} component={CPACS} />
         <Route path={Packages.PROJECT_LINK} component={Packages} />
         <Route path={Scribble.PROJECT_LINK} component={Scribble} />

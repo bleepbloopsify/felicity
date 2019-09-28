@@ -35,7 +35,9 @@ class ProjectContainer extends Component {
 
     return (
       <div className={classes.root}>
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
 
         {children}
 
@@ -49,7 +51,7 @@ class ProjectContainer extends Component {
           <div className={classes.footerLogos}>
             <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem} href="https://github.com/FelicityPictures">Github</a>
 
-            <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem}href="https://www.linkedin.com/in/felicity-ng">Linkedin</a>
+            <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem} href="https://www.linkedin.com/in/felicity-ng">Linkedin</a>
           </div>
         </div>
       </div>

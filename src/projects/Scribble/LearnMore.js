@@ -57,7 +57,7 @@ class LearnMore extends Component {
           each year with the new designs.
           </b>
         </Typography>
-        <a className={classes.button} href="http://www.scribblenyc.nyu.edu" target="_blank">
+        <a className={classes.button} href="http://www.scribblenyc.nyu.edu" target="_blank" rel="noopener noreferrer">
           Go to the website
         </a>
 

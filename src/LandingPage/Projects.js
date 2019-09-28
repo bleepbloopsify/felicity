@@ -1,27 +1,7 @@
 import { withStyles } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Section, Sections } from '../Sections';
 
-const projects = [
-  {"eyebrows": "Product design",
-   "title": "CPACS Funding Request",
-   "description": "Analyzing business needs to redesign a legacy enterprise system for managing capital projects.",
-   "imagepath": ""
-  },
-  {"eyebrows": "Product design",
-   "title": "Packages",
-   "description": "Taking a manual, paper-based process and optimizing it into a digital system.",
-   "imagepath": ""
-  },
-  {"eyebrows": "UX/UI Design",
-   "title": "OSIRIS",
-   "description": "Combining the OSIRIS websites and updating it with the new branding guidelines.",
-   "imagepath": ""
-  },
-
-]
 
 const styles = theme => ({
   main: {
@@ -94,7 +74,7 @@ class Projects extends Component {
       <main className={classes.main}>
 
         <section className={classes.projectOverview}>
-          <img src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo}></img>
+          <img alt="Packages mockup" src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo} />
 
           <div className={classes.projectOverview__info}>
             <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
@@ -113,7 +93,7 @@ class Projects extends Component {
 
 
         <section className={classes.projectOverview}>
-          <img src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo}></img>
+          <img alt="Cpacs mockup" src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo} />
 
           <div className={classes.projectOverview__info}>
             <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
@@ -132,7 +112,7 @@ class Projects extends Component {
 
 
         <section className={classes.projectOverview}>
-          <img src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
+          <img alt="Scribble Mockup" src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
           <div className={classes.projectOverview__info}>
             <h2 className={classes.projectOverview__eyebrows}>Branding</h2>

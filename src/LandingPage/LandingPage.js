@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-
-import { Section, Sections } from '../Sections';
+import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Jumbotron from './Jumbotron';
 import Navbar from './Navbar';
 import Projects from './Projects';
-import { Link } from 'react-router-dom';
-import { Typography } from '@material-ui/core';
+
+
 
 const styles = theme => ({
   jumboContainer: {
@@ -28,7 +27,7 @@ const styles = theme => ({
     "box-sizing": "border-box",
     "margin-top": "80px",
   },
-  footer__icon:{
+  footer__icon: {
     "margin-left": "30px",
     width: "26px",
     height: "auto",
@@ -55,13 +54,13 @@ class LandingPage extends Component {
 
           {/* Put logos here */}
           <div>
-          <Link to="https://github.com/felicitypictures">
-            <img src="/github_icon.png" className={classes.footer__icon}></img>
-          </Link>
+            <Link to="https://github.com/felicitypictures">
+              <img alt="github icon" src="/github_icon.png" className={classes.footer__icon}></img>
+            </Link>
 
-          <Link to="https://www.linkedin.com/in/felicity-ng/">
-            <img src="/linkedin_icon.png" className={classes.footer__icon}></img>
-          </Link>
+            <Link to="https://www.linkedin.com/in/felicity-ng/">
+              <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
+            </Link>
           </div>
         </div>
 
