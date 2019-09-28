@@ -4,147 +4,152 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Section, Sections } from '../Sections';
 
+const projects = [
+  {"eyebrows": "Product design",
+   "title": "CPACS Funding Request",
+   "description": "Analyzing business needs to redesign a legacy enterprise system for managing capital projects.",
+   "imagepath": ""
+  },
+  {"eyebrows": "Product design",
+   "title": "Packages",
+   "description": "Taking a manual, paper-based process and optimizing it into a digital system.",
+   "imagepath": ""
+  },
+  {"eyebrows": "UX/UI Design",
+   "title": "OSIRIS",
+   "description": "Combining the OSIRIS websites and updating it with the new branding guidelines.",
+   "imagepath": ""
+  },
 
+]
 
 const styles = theme => ({
-  project_section: {
+  main: {
     display: "flex",
-    "flex-direction": "row",
-    width: '100%',
-    "align-items": "center",
+    "flex-direction": "column",
     "justify-content": "center",
+    "align-items": "center",
   },
-  project_description: {
-    'padding-left': '170px',
-    'padding-bottom': '100px',
+  projectOverview: {
+    width: "940px",
+    display: "grid",
+    "grid-template-columns": "repeat(2, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+    "grid-auto-flow": "dense",
+    "margin-top": "90px",
+  },
+  projectOverview__info: {
+    "grid-column": "span 1",
+    "grid-row": "span 1",
+    "grid-column-start": "1",
     display: "flex",
-    "max-width": "40vw",
+    "justify-content": "flex-start",
+    "align-content": "flex-start",
     "flex-direction": "column",
   },
-  topic: {
-    "font-family": "Karla",
-    "font-style": "normal",
+  projectOverview__eyebrows: {
+    "font-family": "'Karla', sans-serif",
     "font-weight": "bold",
     "font-size": "18px",
-    "line-height": "21px",
-
-    "margin-top": "65.11px",
+    "margin": "8px 0px"
   },
-  title: {
-    "font-family": "Karla",
-    "font-style": "normal",
+  projectOverview__title: {
+    "margin": "0px",
+    "font-family": "'Karla', sans-serif",
     "font-weight": "bold",
     "font-size": "36px",
-    "line-height": "21px",
-
-    "margin-top": '19.89px',
+    "margin-top": "7px"
   },
-  description: {
-    "font-family": "Muli",
-    "font-style": "normal",
-    "font-weight": "normal",
+  projectOverview__description: {
+    "font-family": "'Muli', sans-serif",
     "font-size": "16px",
-    "line-height": "20px",
-
-    "color": "#333333",
-
-
-    "margin-top": "30.11px",
+    "margin": "30px 0px",
   },
-  read_more: {
-    "margin-top": "29.89px",
-  },
-  read_more_button: {
-    "background": "#880A56",
+  projectOverview__button: {
+    "all": "unset",
+    "font-family": "'Muli', sans-serif",
+    "font-weight": "bold",
+    "font-size": "12px",
+    "background-color": "#880A56",
     "color": "white",
-    "border-radius": "30px",
-    "font-family": "Muli",
-    "padding-left": "39px",
-    "padding-right": "39px",
+    "text-align": "center",
+    "width": "140px",
+    "padding": "8px 0px",
+    "border-radius": "50px"
   },
-  project_image: {
-    "max-width": "30vw",
-    "margin": "57px",
-  },
-});
+  projectOverview__photo: {
+    "grid-column": "span 1",
+    "grid-column-start": "2",
+    "grid-row": "span 1",
+    "width": "100%",
+    "height": "auto"
+  }
+})
 
 class Projects extends Component {
   render() {
     const { classes } = this.props;
-
     return (
-      <Sections>
-        <Section>
-          <div className={classes.project_section}>
-            <div className={classes.project_description}>
-              <div className={classes.topic}>
-                Product Design
-              </div>
-              <div className={classes.title}>
-                CPACS
-              </div>
-              <div className={classes.description}>
-                Redisigning a full service capital project management system used by NYU.
-              </div>
-              <div className={classes.read_more}>
-                <Link to="/projects/cpacs">
-                  <Button className={classes.read_more_button}>Read More</Button>
-                </Link>
-              </div>
-            </div>
-            {/* Image goes here, absolute position */}
-            <img alt="CPACS Mockup" className={classes.project_image} src="/CPACSweb/CPACS mockup.jpg"></img>
+      <main className={classes.main}>
 
+        <section className={classes.projectOverview}>
+          <img src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo}></img>
+
+          <div className={classes.projectOverview__info}>
+            <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
+            <h1 className={classes.projectOverview__title}>Packages</h1>
+            <p className={classes.projectOverview__description}>
+              Taking a manual, paper-based process and converting it into a
+              digital system.
+            </p>
+            <Link to="/projects/packages">
+              <button className={classes.projectOverview__button}>
+                Read more
+              </button>
+            </Link>
           </div>
-        </Section>
-        <Section>
-          <div className={classes.project_section}>
-            <div className={classes.project_description}>
-              <div className={classes.topic}>
-                UX/UI Design
-              </div>
-              <div className={classes.title}>
-                Packages
-              </div>
-              <div className={classes.description}>
-                A streamlined system for managing mail room inventory in NYU faculty housing.
-              </div>
-              <div className={classes.read_more}>
-                <Link to="/projects/packages">
-                  <Button className={classes.read_more_button}>Read More</Button>
-                </Link>
-              </div>
-            </div>
-            <img alt="Packages Mockup" className={classes.project_image} src="/Packages/PACKAGES_MOCKUP.jpeg"></img>
+        </section>
+
+
+        <section className={classes.projectOverview}>
+          <img src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo}></img>
+
+          <div className={classes.projectOverview__info}>
+            <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
+            <h1 className={classes.projectOverview__title}>CPACS Funding Request</h1>
+            <p className={classes.projectOverview__description}>
+              Analyzing business needs to redesign a legacy enterprise system
+              for managing capital projects.
+            </p>
+            <Link to="/projects/cpacs">
+              <button className={classes.projectOverview__button}>
+                Read more
+              </button>
+            </Link>
           </div>
+        </section>
 
-        </Section>
-        <Section>
-          <div className={classes.project_section}>
-            <div className={classes.project_description}>
-              <div className={classes.topic}>
-                Branding
-              </div>
-              <div className={classes.title}>
-                Scribble NYC
-              </div>
-              <div className={classes.description}>
-                A design forum and design-a-thon targeted at middle school and high school students to expose them to the world of product design.
-              </div>
-              <div className={classes.read_more}>
-                <Link to="/projects/scribblenyc">
-                  <Button className={classes.read_more_button}>Read More</Button>
-                </Link>
-              </div>
-            </div>
 
-            <img alt="Scribble NYC Logo" className={classes.project_image} style={{
-              backgroundColor: "#F3F3F3",
-            }} src="/Scribble/Scribble jumbotron-01.png"></img>
+        <section className={classes.projectOverview}>
+          <img src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
+          <div className={classes.projectOverview__info}>
+            <h2 className={classes.projectOverview__eyebrows}>Branding</h2>
+            <h1 className={classes.projectOverview__title}>Scribble NYC</h1>
+            <p className={classes.projectOverview__description}>
+              A design forum and design-a-thon targetted towards middle school
+              and high school students to expose them to the world of product
+              design.
+            </p>
+            <Link to="/projects/scribblenyc">
+              <button className={classes.projectOverview__button}>
+                Read more
+              </button>
+            </Link>
           </div>
-        </Section>
-      </Sections>
+        </section>
+      </main>
     );
   }
 }

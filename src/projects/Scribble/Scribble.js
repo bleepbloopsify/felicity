@@ -7,11 +7,10 @@ import { Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { Sections, Section } from '../../Sections';
 import uparrow from '../../uparrow.svg';
-import Overview from './Overview';
-import CreativeBrief from './CreativeBrief';
-import Research from './Research';
-import Design from './Design';
-import Present from './Present';
+import Story from './Story';
+import Applications from './Applications';
+import Evolution from './Evolution';
+import LearnMore from './LearnMore';
 
 const styles = theme => ({
   root: {
@@ -23,18 +22,45 @@ const styles = theme => ({
     "flex-grow": 1,
     padding: "5em",
   },
-  content: {
-    "flex-grow": 5,
-    padding: "4em",
+  underJumbo: {
+    "display":"flex",
+    "flex-direction": "row",
+    "flex-wrap": "nowrap",
+    "margin-top": "70px"
   },
-  other_projects: {
+  textContainer: {
+    "width": "100%",
     display: "flex",
-    "flex-direction": "flex-row",
+    "justify-content": "center"
   },
-  project_image: {
-    "max-width": "20em",
-    "margin": "2em",
+  content: {
+    "width": "940px",
   },
+  otherProjects: {
+    "border-top": "1px solid black",
+    "padding": "10px 0px"
+  },
+  otherProjects__title: {
+    "margin": "20px 0px",
+    "font-family": "'Karla', sans-serif",
+    "font-size": "16px",
+    "font-weight": "bold"
+  },
+  otherProjects__grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+  },
+  otherProjects__grid__span4: {
+      "grid-column": "span 4",
+      "grid-row": "span 1",
+  },
+  otherProjects__grid__span4__photo: {
+      width: "100%",
+      height: "auto",
+  }
 });
 
 class Scribble extends Component {
@@ -48,91 +74,79 @@ class Scribble extends Component {
     return (
       <ProjectContainer>
         <Jumbotron />
-        <div className={classes.root}>
-          <div className={classes.tableOfContents}>
-            {/* Table of contents goes here */}
-            <TableOfContents>
-              <TableOfContentsItem anchor="overview">
-                <Typography color="primary">
-                  Overview
-                </Typography>
-              </TableOfContentsItem>
-              <div style={{
-                height: "3em",
-              }} />
-              <TableOfContentsItem anchor="understand">
-                <Typography color="primary">
-                  Understand
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="analyze">
-                <Typography color="primary">
-                  Analyze
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="ideate">
-                <Typography color="primary">
-                  Ideate
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="design">
-                <Typography color="primary">
-                  Design
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="testing">
-                <Typography color="primary">
-                  Testing
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="testing">
-                <Typography color="primary">
-                  Learn
-                </Typography>
-              </TableOfContentsItem>
-              <div style={{
-                height: "3em",
-              }} />
-              <TableOfContentsItem anchor="top">
-                <img src={uparrow} alt="" /> Top
-              </TableOfContentsItem>
-            </TableOfContents>
-            {/* We need a way to get back to the top of the page */}
-          </div>
-          <div className={classes.content}>
-            <Sections>
-              <Section id="overview">
-                <Overview />
-              </Section>
-              <Section id="creative_brief">
-                <CreativeBrief />
-              </Section>
-              <Section id="research">
-                <Research />
-              </Section>
-              <Section id="design">
-                <Design />
-              </Section>
-              {/* <Section id="present">
-                <Present />
-              </Section> */}
-              <hr style={{ width: "96%" }} />
-              <Section>
-                <Typography variant="subtitle1">
-                  Other Projects
-                </Typography>
-                <div className={classes.other_projects}>
-                  <Link to="/projects/packages">
-                    <img alt="Packages Mockup" className={classes.project_image} src="/Packages/PACKAGES_MOCKUP.jpeg"></img>
-                  </Link>
-                  <Link to="/projects/cpacs">
-                    <img alt="CPACS Mockup" className={classes.project_image} src="/CPACSweb/CPACS mockup.jpg"></img>
-                  </Link>
-                </div>
-              </Section>
-            </Sections>
+
+        <div className={classes.underJumbo}>
+
+          <TableOfContents>
+            <TableOfContentsItem anchor="story">
+              <Typography color="primary">
+                Story
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="applications">
+              <Typography color="primary">
+                Applications
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="evolution">
+              <Typography color="primary">
+                Evolution
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="learnMore">
+              <Typography color="primary">
+                Learn More
+              </Typography>
+            </TableOfContentsItem>
+            <div style={{
+              height: "1.5em",
+            }}></div>
+            <TableOfContentsItem anchor="top">
+              <img src={uparrow} alt="" /> Top
+            </TableOfContentsItem>
+          </TableOfContents>
+
+          <div className={classes.textContainer}>
+            <div className={classes.content}>
+              <Sections>
+                <Section id="story">
+                  <Story />
+                </Section>
+                <Section id="applications">
+                  <Applications />
+                </Section>
+                <Section id="evolution">
+                  <Evolution />
+                </Section>
+                <Section id="learnMore">
+                  <LearnMore />
+                </Section>
+
+                <Section>
+                  <div className={classes.otherProjects}>
+                    <h1 className={classes.otherProjects__title}>
+                      Other Projects
+                    </h1>
+                    <div className={classes.otherProjects__grid}>
+                      <Link to="/projects/packages" className={classes.otherProjects__grid__span4}>
+                        <img alt="Packages Mockup"
+                            className={classes.otherProjects__grid__span4__photo}
+                            src="/Packages/Packages_mockup.jpeg"/>
+                      </Link>
+                      <Link to="/projects/cpacs" className={classes.otherProjects__grid__span4}>
+                        <img alt="CPACS mockup"
+                            className={classes.otherProjects__grid__span4__photo}
+                            src="/CPACSweb/CPACS_mockup.jpg"/>
+                      </Link>
+                    </div>
+                  </div>
+                </Section>
+
+              </Sections>
+            </div>
           </div>
         </div>
+
       </ProjectContainer>
     );
   }

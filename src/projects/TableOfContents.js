@@ -3,24 +3,31 @@ import { withStyles } from '@material-ui/styles';
 
 const styles = theme => ({
   root: {
-    position: "sticky",
-    "top": "5em",
+    "position": "sticky",
+    "height": "30vh",
+    "top": "10em",
+    "padding": "0px 25px",
+    "width": "100px"
+  },
+  tableOfContents: {
     "border-left": "solid #880A56",
-    "padding-left": "2em",
+    "padding": "10px 5px",
+    "z-index": "0"
   },
   items: { // this is the container meant to hold each item
 
   }
-  
+
 });
 
 class _TableOfContents extends Component {
-
   render() {
     const { classes, children } = this.props;
     return (
       <div className={classes.root}>
-        {children}
+        <div className={classes.tableOfContents}>
+          {children}
+        </div>
       </div>
     );
   }

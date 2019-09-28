@@ -5,7 +5,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": "column",
-    "padding-top": "2em",
+    "margin-bottom": "100px"
   }
 });
 
@@ -20,9 +20,31 @@ class Testing extends Component {
         </Typography>
         <Typography gutterBottom>
           <b>
-          Tailoring the experience for a very specific crowd
-          </b><br/><br/>
-          Packages, at its inception, was meant for six ladies, each of which worked at a package room in NYU Faculty housing. They are our initial audience for this application. While there are plans to expand the system, we had to satisfy the requirements set forth by these ladies first. User tests were performed on people who were most similar to our target audience. The participants were middle aged people with varying degrees of familiarity with technology.
+          We scheduled meetings throughout the design phase with the mailroom
+          employees and stakeholders to ensure the product met their needs.
+          </b>
+          <br/>
+          We met with the mailroom employees and their supervisors regularly to
+          ensure our product met their needs and didn’t bring up any concerns
+          with their supervisors. We took notes as they commented on the
+          prototypes and with each meeting, we incorporated their feedback into
+          our designs.
+          <br/>
+          <br/>
+
+          <b>
+          We showed our more developed product to the residents to gather
+          feedback on how we can seamlessly incorporate the new system into
+          their daily lives.
+          </b>
+          <br/>
+          The new system will be a direct line of contact between the mailrooms
+          and the residents. We needed to find out what kind of notifications we
+          should send out, whether they be push notifications, texting, emails,
+          etc. In addition, we wanted to ensure the residents would be
+          comfortable with this, as some people might find notifications a
+          nuisance. We presented our designs and ideas at a resident meeting and
+          gathered feedback.
         </Typography>
       </div>
     );

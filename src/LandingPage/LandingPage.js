@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/styles';
 import Jumbotron from './Jumbotron';
 import Navbar from './Navbar';
 import Projects from './Projects';
+import { Link } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
@@ -19,16 +20,19 @@ const styles = theme => ({
   footer: {
     height: "10em",
     "background-color": "#F5FDFF",
-    "padding-left": "5em",
-    "padding-top": "3em",
-    "padding-right": "5em",
+    "padding": "70px 50px",
+    display: "flex",
+    "flex-direction": "row",
+    "justify-content": "space-between",
+    "align-items": "center",
+    "box-sizing": "border-box",
+    "margin-top": "80px",
   },
-  footerLogos: {
-    "float": "right",
-  },
-  footerLogoItem: {
-    "padding-left": "5em",
-  },
+  footer__icon:{
+    "margin-left": "30px",
+    width: "26px",
+    height: "auto",
+  }
 });
 
 class LandingPage extends Component {
@@ -37,34 +41,31 @@ class LandingPage extends Component {
     const { classes } = this.props;
 
     return (
-      <Sections>
-        <Section>
-          <div className={classes.navbarContainer}>
-            <Navbar />
-          </div>
-          <div className={classes.jumboContainer}>
-            <Jumbotron />
-          </div>
-        </Section>
-        <Section>
-          <Projects />
-        </Section>
-        <Section>
-          <div className={classes.footer}>
-              <Typography variant="h1" color="primary">
-                felicity.ng@nyu.edu
-              </Typography>
+      <div>
+        <header>
+          <Navbar />
+        </header>
+        <Jumbotron />
+        <Projects />
 
+        <div className={classes.footer}>
+          <Typography variant="h1" color="primary">
+            felicity.ng@nyu.edu
+          </Typography>
 
-            {/* Put logos here */}
-            <div className={classes.footerLogos}>
-              <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem} href="https://github.com/FelicityPictures">Github</a>
+          {/* Put logos here */}
+          <div>
+          <Link to="https://github.com/felicitypictures">
+            <img src="/github_icon.png" className={classes.footer__icon}></img>
+          </Link>
 
-              <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem}href="https://www.linkedin.com/in/felicity-ng">Linkedin</a>
-            </div>
+          <Link to="https://www.linkedin.com/in/felicity-ng/">
+            <img src="/linkedin_icon.png" className={classes.footer__icon}></img>
+          </Link>
           </div>
-        </Section>
-      </Sections>
+        </div>
+
+      </div>
     );
   }
 }

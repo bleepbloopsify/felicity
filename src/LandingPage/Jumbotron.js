@@ -4,54 +4,38 @@ import { withStyles } from '@material-ui/styles';
 const styles = theme => ({
   root: {
     width: '100%',
-    height: '424px',
+    "min-height": '400px',
     background: '#F5FDFF',
+    padding: "80px 0px",
+    "box-sizing": "border-box",
+    display: "flex",
+    "flex-direction": "column",
+    "justify-content": "center",
+    "align-items": "center",
+  },
+  nameAndAvatar: {
+    display: "flex",
+    "flex-direction": "row",
+    "flex-wrap": "nowrap",
   },
   centerText: {
-    'position': 'absolute',
-    'top': '3em',
-
-    'left': '50%',
-    'margin-right': '-50%',
-    'transform': 'translate(-50%, -50%)',
-
-    'font-family': 'Itim',
+    'font-family': "'Itim', cursive",
     'font-style': 'normal',
     'font-weight': 'normal',
     'font-size': '72px',
-    'line-height': '86px',
-    /* identical to box height */
-
-    'text-align': 'center',
-
-    'color': '#D772AF',
+    "color": "#D772AF",
+    "margin-top": "11px",
   },
   centerCaption: {
-    'position': 'absolute',
-    'top': '15em',
-
-    'left': '50%',
-    'margin-right': '-50%',
-    'transform': 'translate(-50%, -50%)',
-
     'font-family': 'Muli',
     'font-style': 'normal',
-    'font-weight': 'bold',
     'font-size': '18px',
-    'line-height': '23px',
-    /* identical to box height */
-
     'color': '#333333',
   },
-  centerLogo: {
-    'position': 'absolute',
-    'width': '99px',
-    'height': '99px',
-    'top': '7em',
-
-    'left': '50%',
-    'margin-right': '-50%',
-    'transform': 'translate(-50%, -50%)',
+  avatar: {
+    width: "88px",
+    height: "91px",
+    "margin-left": "10px",
   },
 });
 
@@ -60,24 +44,20 @@ class Jumbotron extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        {/* Navbar goes here */}
-        <div className={classes.navbar}>
-          {/* We have a link to the homepage here.
-            Should probably move this bar to a separate reusable component
-           */}
 
+        <div className={classes.nameAndAvatar}>
           <div className={classes.centerText}>
             felicity ng
           </div>
-
-          <div className={classes.centerCaption}>
-            UX/UI designer @ NYU IT
-          </div>
-
-          <img alt="Felcity's Logo should be here uwu" className={classes.centerLogo} src="/felicity_avatar.png" />
+          <img alt="Felcity's Logo should be here uwu"
+               className={classes.avatar}
+               src="/felicity_avatar.png" />
         </div>
 
-        {/* Have an absolute styled central link here */}
+        <p className={classes.centerCaption}>
+          User Experience, User Interface, Graphic Designer
+        </p>
+
       </div>
     );
   }

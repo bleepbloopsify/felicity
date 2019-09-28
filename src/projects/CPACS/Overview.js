@@ -4,27 +4,41 @@ import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
   root: {
-    width: "100%",
-    display: "flex",
-    "flex-direction": "column",
+    "margin-bottom": "100px"
   },
   table: {
-    display: "flex",
-    "flex-direction": "row",
-    "justify-content": "space-between",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
     "padding-bottom": "2em",
   },
-  tableItem: {
-    display: "flex",
-    "flex-direction": "column",
+  tableItemSpan4: {
+    "grid-column": "span 4",
+    "margin": "5px 0px",
+    "font-size": "16px"
+  },
+  tableItemSpan12: {
+    "grid-column": "span 12",
+    "margin": "5px 0px",
+    "font-size": "16px"
+  },
+  tableItemSpan2: {
+    "grid-column": "span 2",
+    "margin": "5px 0px",
+    "font-size": "16px"
   },
   fancyBubble: {
-    "padding": "1em 2em 1em 2em",
+    "padding": "15px 20px",
     "border-radius": "4px",
-    "min-width": "5em",
     "text-align": "center",
-    "margin-bottom": "0.5em",
+    "font-family": "'Karla', sans-serif",
+    "font-size": "18px",
+    "font-weight": "bold"
   },
+  processDetails: {
+    "padding-top": "10px"
+  }
 
 });
 
@@ -35,108 +49,105 @@ class Overview extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.table}>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan4}>
             <Typography>
               <b>
                 Client
               </b>
             </Typography>
-            <center>
-              <Typography variant="body1">
-                NYU IT OTSS
-              </Typography>
-            </center>
+            <Typography variant="body1">
+              NYU IT OTSS
+            </Typography>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan4}>
             <Typography>
               <b>
                 Role
               </b>
             </Typography>
-            <center>
-              <Typography variant="body1">
-                Lead UX/UI Developer
-              </Typography>
-            </center>
+            <Typography variant="body1">
+              UX/UI Designer
+            </Typography>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan4}>
             <Typography>
               <b>
                 Duration
               </b>
             </Typography>
-            <center>
-              <Typography variant="body1">
-                December 2018 - Present
-              </Typography>
-            </center>
+            <Typography variant="body1">
+              October 2017 - Present
+            </Typography>
           </div>
         </div>
-        <div>
+        <div className={classes.tableItemSpan12}>
           <center>
             <Typography variant="body1">
-              Packages is a bookkeeping system used by package room employees in NYU faculty housing.
+              CPACS stands for Capital Projects Administration and Control
+              System. Interfacing with many other university systems, it
+              provides a centralized place for users to find and manage the
+              information and documents necessary for a capital project.
             </Typography>
           </center>
         </div>
 
         <div className={classes.table} style={{ paddingTop: "2em" }}>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#BFD6ED" }}>
               Understand
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 Study Context<br />Interviews
               </Typography>
             </center>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#9ECFFF" }}>
               Analyze
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 Problem Statement
               </Typography>
             </center>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#DDDAFD" }}>
               Ideate
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 Design Principles<br />Workflow Diagrams
               </Typography>
             </center>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#D3E9FF" }}>
               Design
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 Wireframes<br />Mockups<br />Prototypes
               </Typography>
             </center>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#D9F3FF" }}>
               Test
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 User Testing<br />Interviews
               </Typography>
             </center>
           </div>
-          <div className={classes.tableItem}>
+          <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#CCFAE1" }}>
               Learn
             </div>
             <center>
-              <Typography variant="body2">
+              <Typography variant="body2" className={classes.processDetails}>
                 Assess Feedback<br />Fix Details
               </Typography>
             </center>

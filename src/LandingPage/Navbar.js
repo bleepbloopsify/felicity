@@ -4,25 +4,37 @@ import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-  root: {
-    height: "5em",
-    width: "100%",
-    display: 'flex',
+  nav: {
+    'width': '100%',
+    'position': 'fixed',
+    'top': '0px',
+    'left': '0px',
+    'box-sizing': 'border-box',
+    'padding': '20px 50px',
+    'display': 'flex',
     'flex-direction': 'row',
-    "align-items": "center",
-    "justify-content": "space-between",
-    "background-color": "#F5FDFF",
+    'justify-content': 'space-between',
+    'align-content': 'center',
+    'background-color': '#F5FDFF'
   },
-  home: {
-    "padding-left": "2em",
+  nav__name: {
+    'textDecorationLine': 'none',
+    'fontSize': '36px',
+    'font-family': "'Itim', cursive",
+    'color': '#D772AF'
   },
-  items: {
-    display: "flex",
-    "flex-direction": "row",
-    "padding-right": "2em",
+  nav__rightSide: {
+    'display': 'flex',
+    'flex-direction': 'row'
   },
-  item: {
-    padding: '32px',
+  nav__rightSide__a: {
+    'text-decoration': 'none',
+    'font-family': "'Karla', sans-serif",
+    'font-weight': 'bold',
+    'font-size': '18px',
+    'color': 'black',
+    'margin-left': '55px',
+    'align-self': 'center'
   }
 });
 
@@ -31,28 +43,13 @@ class Navbar extends Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
-        <div id="#top" style={{ display: "none" }} />
-        <Typography variant="h1" color="primary">
-          <Link className={classes.home} to="/">
-            felicity
-          </Link>
-        </Typography>
-        {/* <div className={classes.items}>
-          <div className={classes.item}>
-            <Typography variant="h2" color="secondary">
-              <Link to="/work">Work</Link>
-            </Typography>
-          </div>
-          <div className={classes.item}>
-            <Typography variant="h2" color="secondary">
-              <Link to="/aboutme">
-                About Me
-              </Link>
-            </Typography>
-          </div>
-        </div> */}
-      </div>
+      <nav className={classes.nav}>
+        <a className={classes.nav__name} href="/">felicity ng</a>
+        <div className={classes.nav__rightSide}>
+          <a href="/" className={classes.nav__rightSide__a}>Work</a>
+          <a href="/about" className={classes.nav__rightSide__a}>About Me</a>
+        </div>
+      </nav>
     );
   }
 }

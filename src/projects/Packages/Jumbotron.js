@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core';
-
-import jumbotron from './jumbotron.svg'
+import React, { Component } from "react";
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    'align-items': "center",
+    width: "100%",
+    height: "516px",
+    background: "#FFFCF1",
+    display: "flex",
+    "align-items": "center",
     "justify-content": "center",
-    "background-color": "#FFFCF1",
   },
+  img: {
+    "max-height": "24em",
+  }
 });
 
 class Jumbotron extends Component {
@@ -18,7 +21,7 @@ class Jumbotron extends Component {
 
     return (
       <div className={classes.root}>
-        <img alt="" src={jumbotron} />
+        <img alt="" className={classes.img} src="/Packages/Packages_Logo.png"></img>
       </div>
     );
   }

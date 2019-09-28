@@ -5,7 +5,20 @@ const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": "column",
-    "padding-top": "2em",
+    "margin-bottom": "100px"
+  },
+  grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+  },
+  grid__span6: {
+    width: "100%",
+    height: "auto",
+    "grid-column": "span 6",
+    "grid-row": "span 1",
   }
 });
 
@@ -18,13 +31,21 @@ class Design extends Component {
         <Typography variant="subtitle1" gutterBottom>
           Design
         </Typography>
+
         <Typography gutterBottom>
           <b>
-          It was a data centric system. Everything revolves around packages so that’s what we began with.
-          </b><br/><br/>
-          When a package is delivered to the package room, the most likely outcome would be that it is delivered to the intended resident. A package is signed for by either the intended resident or someone who lives with that resident. The decision to release a package to someone is left up to the discretion of the package room employees.<br /><br />
-          A package can also be returned, whether because they were refused by the resident or because the package hasn’t been picked up by a specified deadline.
+          Adding a package to the system.
+          </b>
         </Typography>
+        <div className={classes.grid}>
+          <img src="/CPACSweb/No_Budget_Overview.png"
+                alt="budget overview mockup"
+                className={classes.grid__span6}/>
+          <img src="/CPACSweb/Submitting_New_Budget.png"
+                alt="new budget mockup"
+                className={classes.grid__span6}/>
+        </div>
+
       </div>
     );
   }

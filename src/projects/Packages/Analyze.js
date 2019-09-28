@@ -6,15 +6,21 @@ const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": "column",
-    "margin-top": "2em",
+    "margin-bottom": "100px"
   },
-  img: {
-    "max-width": "100%",
+  grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
   },
-  listStyle: {
-    'list-style-type': "none",
-    'padding-left': 0,
-  },
+  grid__span6: {
+    width: "100%",
+    height: "auto",
+    "grid-column": "span 6",
+    "grid-row": "span 1",
+  }
 });
 
 class Analyze extends Component {
@@ -27,52 +33,55 @@ class Analyze extends Component {
           Analyze
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography gutterBottom style={{ marginBottom: "0px" }}>
           <b>
-            Defining the problem
+          With the increase in e-commerce, manual information entry gets tedious
+          and is more prone to errors.
           </b>
-        </Typography>
+          <br/>
+          As more people choose to do their shopping online, the number of
+          packages that go through the mailrooms will only increase. The task of
+          recording tracking numbers and the times they arrived into a binder
+          and then doing it again for a package slip can get tedious. Human
+          error is bound to happen and the chances for mistakes can only
+          increase as time goes by.
+          <br/>
+          <br/>
 
-        <ul className={classes.listStyle}>
-          <li>
-            <Typography>
-              - Inefficient
-            </Typography>
-          </li>
-          <li>
-            <Typography>
-              - Not environmentally friendly
-            </Typography>
-          </li>
-          <li>
-            <Typography>
-              - Not enough human resources to
-              handle the increase in package volume
-            </Typography>
-          </li>
-          <li>
-            <Typography>
-              - Lacks scalability
-            </Typography>
-          </li>
-          <li>
-            <Typography>
-              - Difficulty in tracking packages
-              using paper records
-            </Typography>
-          </li>
-        </ul>
-
-
-        <Typography gutterBottom>
           <b>
-            The Challenge
+          Using paper slips to notify residents to pick up packages is slow and
+          outdated.
           </b>
-        </Typography>
+          <br/>
+          Unlike notifications and information on the digital systems, paper
+          slips cannot effectively communicate real time information. A resident
+          would have to go to their mailboxes before they know that their
+          packages have arrived. In addition, packages can only be picked up if
+          they have the paper slip, meaning it is necessary for residents to
+          take the extra step of going to their mailboxes before they can pick
+          up their packages. Asking so much from residents makes it so that
+          picking up packages is an errand, one that has to be planned out, and
+          this results in procrastination.
+          <br/>
+          <br/>
 
-        <Typography variant="body1" style={{ paddingBottom: "2em" }}>
-          The current way of bookkeeping in the package rooms of NYU faculty housing is inefficient. Writing all the information related to a package onto paper is slow. If there were a large delivery of packages for the building, the one employee for each package room is overwhelmed by the simple task of putting information into the binder. With paper based information logging, finding past information is difficult or even impossible if the paper containing the information is discarded, defeating a big reason for bookkeeping.
+          <b>
+          It is hard to retrieve information from a handful of thick binders.
+          </b>
+          The binders of package records are kept on a shelf, in case someone
+          ever needs to look back on them. Manually scanning through tables upon
+          tables of numbers and letters does not sound like a fun job. In the
+          digital age, such a task is made easy with a search function. But you
+          can’t do that with paper. A lot can be learned from the data in the
+          binders but since they are not appropriately compiled or organized, it
+          sits unused on a shelf.
         </Typography>
+        <div className={classes.grid}>
+          <img src="/Packages/process_before.jpg"
+                alt="packages process before"
+                className={classes.grid__span6}/>
+        </div>
+
       </div>
     );
   }

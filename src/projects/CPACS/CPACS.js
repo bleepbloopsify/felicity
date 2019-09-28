@@ -12,30 +12,56 @@ import Overview from "./Overview";
 import Understand from "./Understand";
 import Analyze from "./Analyze";
 import Ideate from "./Ideate";
+import Design from "./Design";
 import Testing from "./Testing";
+import Learn from "./Learn";
 
 const styles = theme => ({
   root: {
-    display: "flex",
-    "justify-content": "center",
-    "padding-right": "10em",
   },
-  tableOfContents: {
-    "flex-grow": 1,
-    padding: "5em",
+  textContainer: {
+    "width": "100%",
+    display: "flex",
+    "justify-content": "center"
   },
   content: {
-    "flex-grow": 5,
-    padding: "4em",
-  },
-  other_projects: {
-    display: "flex",
-    "flex-direction": "flex-row",
+    "width": "940px",
   },
   project_image: {
     "max-width": "20em",
     "margin": "2em",
   },
+  underJumbo: {
+    "display":"flex",
+    "flex-direction": "row",
+    "flex-wrap": "nowrap",
+    "margin-top": "70px"
+  },
+  otherProjects: {
+    "border-top": "1px solid black",
+    "padding": "10px 0px"
+  },
+  otherProjects__title: {
+    "margin": "20px 0px",
+    "font-family": "'Karla', sans-serif",
+    "font-size": "16px",
+    "font-weight": "bold"
+  },
+  otherProjects__grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+  },
+  otherProjects__grid__span4: {
+      "grid-column": "span 4",
+      "grid-row": "span 1",
+  },
+  otherProjects__grid__span4__photo: {
+      width: "100%",
+      height: "auto",
+  }
 });
 
 class CPACS extends Component {
@@ -48,84 +74,103 @@ class CPACS extends Component {
     return (
       <ProjectContainer>
         <Jumbotron />
-        <div className={classes.root}>
-          <div className={classes.tableOfContents}>
-            {/* Table of contents goes here */}
-            <TableOfContents>
-              <TableOfContentsItem anchor="overview">
-                <Typography color="primary">
-                  Overview
-                </Typography>
-              </TableOfContentsItem>
-              <div style={{
-                height: "3em",
-              }} />
-              <TableOfContentsItem anchor="understand">
-                <Typography color="primary">
-                  Understand
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="analyze">
-                <Typography color="primary">
-                  Analyze
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="ideate">
-                <Typography color="primary">
-                  Ideate
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="design">
-                <Typography color="primary">
-                  Design
-                </Typography>
-              </TableOfContentsItem>
-              <TableOfContentsItem anchor="testing">
-                <Typography color="primary">
-                  Testing
-                </Typography>
-              </TableOfContentsItem>
-              <div style={{
-                height: "3em",
-              }} />
-              <TableOfContentsItem anchor="top">
-                <img src={uparrow} alt="" /> Top
-              </TableOfContentsItem>
-            </TableOfContents>
-            {/* We need a way to get back to the top of the page */}
-          </div>
-          <div className={classes.content}>
-            <Sections>
-              <Section id="overview">
-                <Overview />
-              </Section>
-              <Section id="understand">
-                <Understand />
-              </Section>
-              <Section id="analyze">
-                <Analyze />
-              </Section>
-              <Section id="ideate">
-                <Ideate />
-              </Section>
-              <Section id="testing">
-                <Testing />
-              </Section>
-              <hr style={{ width: "96%" }} />
-              <Section>
-                <Typography variant="subtitle1">
-                  Other Projects
-                </Typography>
-                <div className={classes.other_projects}>
-                  <Link to="/projects/packages">
-                    <img alt="Packages Mockup" className={classes.project_image} src="/Packages/PACKAGES_MOCKUP.jpeg"></img>
-                  </Link>
-                  <Link to="/projects/scribblenyc">
-                    <img alt="Scribble NYC Logo" className={classes.project_image} src="/Scribble/Scribble jumbotron-01.png"></img>
-                  </Link>
-                </div>
-              </Section>
-            </Sections>
+        {/* Table of contents goes here */}
+        <div className={classes.underJumbo}>
+
+          <TableOfContents>
+            <TableOfContentsItem anchor="overview">
+              <Typography color="primary">
+                Overview
+              </Typography>
+            </TableOfContentsItem>
+            <div style={{
+              height: "1.5em",
+            }}></div>
+            <TableOfContentsItem anchor="understand">
+              <Typography color="primary">
+                Understand
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="analyze">
+              <Typography color="primary">
+                Analyze
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="ideate">
+              <Typography color="primary">
+                Ideate
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="design">
+              <Typography color="primary">
+                Design
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="testing">
+              <Typography color="primary">
+                Testing
+              </Typography>
+            </TableOfContentsItem>
+            <TableOfContentsItem anchor="learn">
+              <Typography color="primary">
+                Learn
+              </Typography>
+            </TableOfContentsItem>
+            <div style={{
+              height: "1.5em",
+            }}></div>
+            <TableOfContentsItem anchor="top">
+              <img src={uparrow} alt="" /> Top
+            </TableOfContentsItem>
+          </TableOfContents>
+          {/* We need a way to get back to the top of the page */}
+          <div className={classes.textContainer}>
+            <div className={classes.content}>
+              <Sections>
+                <Section id="overview">
+                  <Overview />
+                </Section>
+                <Section id="understand">
+                  <Understand />
+                </Section>
+                <Section id="analyze">
+                  <Analyze />
+                </Section>
+                <Section id="ideate">
+                  <Ideate />
+                </Section>
+                <Section id="design">
+                  <Design />
+                </Section>
+                <Section id="testing">
+                  <Testing />
+                </Section>
+                <Section id="learn">
+                  <Learn />
+                </Section>
+
+
+                <Section>
+                  <div className={classes.otherProjects}>
+                    <h1 className={classes.otherProjects__title}>
+                      Other Projects
+                    </h1>
+                    <div className={classes.otherProjects__grid}>
+                      <Link to="/projects/packages" className={classes.otherProjects__grid__span4}>
+                        <img alt="Packages Mockup"
+                            className={classes.otherProjects__grid__span4__photo}
+                            src="/Packages/Packages_mockup.jpeg"></img>
+                      </Link>
+                      <Link to="/projects/scribblenyc" className={classes.otherProjects__grid__span4}>
+                        <img alt="Scribble NYC Logo"
+                            className={classes.otherProjects__grid__span4__photo}
+                            src="/Scribble/Scribble jumbotron-01.png"></img>
+                      </Link>
+                    </div>
+                  </div>
+                </Section>
+              </Sections>
+            </div>
           </div>
         </div>
       </ProjectContainer>

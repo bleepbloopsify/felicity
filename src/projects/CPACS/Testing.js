@@ -5,7 +5,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": "column",
-    "padding-top": "2em",
+    "margin-bottom": "100px"
   }
 });
 
@@ -20,9 +20,29 @@ class Testing extends Component {
         </Typography>
         <Typography gutterBottom>
           <b>
-          User Interviews + Testing
-          </b><br/><br/>
-          We reached out to the people who are using CPACS the most and they responding. They were enthusiastic about the redesign and provided userful feedback for our user interviews and user tests. It reaffirmed the notion that a CPACS redesign has been long overdue. Some interviewees even did our jobs for us and went around their office, asking their colleagues if they’ve ever encountered a problem with CPACS that they wish we could address. Furthermore, word spread that we were taking feedback and many more users reached out to us, volunteering themselves as future interviewees. Such a response really pushes us to try even harder to push for the user experience in enterprise systems.
+          User interviews revealed to us that we should have a partial save for forms.
+          </b>
+          <br/>
+          During our user interviews, we were informed that occasionally, when
+          users are filling out forms, they might need to stop because they
+          don’t have all the information. However, the system does not allow
+          partial saves, as all essential parts of the form need to be filled
+          out before it can be saved. We pushed to add an autosave function to
+          the system to alleviate this frustration.
+          <br/>
+          <br/>
+
+          <b>
+          If a user makes a mistake and only realizes after they have submitted,
+          they should be able to recall the document.
+          </b>
+          <br/>
+          Many documents in CPACS have to go through a chain of approval. This
+          can be a slow process. If the submitter catches a mistake, it can be
+          slow and frustrating to track down the person the document is waiting
+          on and inform them of the mistake so that the approver can return the
+          document back to the submitter to fix. Instead, a recall button can
+          speed this process up.
         </Typography>
       </div>
     );

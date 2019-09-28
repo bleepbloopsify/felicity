@@ -1,35 +1,66 @@
-import { Typography } from '@material-ui/core';
 import React, { Component } from 'react';
+import { Typography, withStyles } from '@material-ui/core';
 
-export default class Understand extends Component {
+const styles = theme => ({
+  root: {
+    display: "flex",
+    "flex-direction": "column",
+    "margin-bottom": "100px"
+  },
+  grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+  },
+  grid__span6: {
+    width: "100%",
+    height: "auto",
+    "grid-column": "span 6",
+    "grid-row": "span 1",
+  }
+});
+
+class Understand extends Component {
 
   render() {
+    const { classes } = this.props;
+
     return (
-      <div>
+      <div className={classes.root}>
         <Typography variant="subtitle1" gutterBottom>
           Understand
         </Typography>
-        <Typography gutterBottom>
-          <b>
-            It was a multi-facetted job.
-          </b>
-        </Typography>
-
-        <Typography variant="body1" style={{ paddingBottom: "2em" }}>
-          NYU’s Office of Construction Management asked NYU’s Operations Technology Services and Systems to redesign CPACS, as it was outdated. This involved making the application accessible, improving its usability, and adding/ removing features to improve the lives of its users.
-        </Typography>
 
         <Typography gutterBottom>
-          <b>
-            We needed to understand a system we have never seen before and a lingo we are barely familiar with.
-          </b>
+          <b>CPACS houses the university’s capital projects. Each project consists
+          of multiple modules. I redesigned the budget module.</b>
+          <br/>
+          The product owner needed to give the budget module a facelift as well
+          as smooth out the process of filling out the forms in the budget modules.
+          <br/>
+          <br/>
+          <b>The budget module consists of three types of documents.</b>
+          <br/>
+          Funding forms are filled out at the beginning of a project,
+          supplemental budgets and budget modifications throughout the lifetime
+          of a project. Supplemental budgets are submitted when the overall
+          amount that is being used on a project changes while budget
+          modifications are submitted when money is simply being moved from one
+          account to another.
+          <br/>
+          <br/>
+          <b>The way things are now:</b>
         </Typography>
-
-        <Typography variant="body1">
-          None of the designers have used CPACS before, so we first set out to experience the system firsthand.
-          Many CPACS users first need to go through official training sessions to learn the different document workflows that happen in the system before they are free to use the system in their everyday work. We sat in on these trainings, learning alongside other first time CPACS users. As the user support personnel walked us through the system, we took notes on any flaws or hiccups we observed in the system or strange occurrences in the workflows that the user support personnel pointed out. Afterwards, we read through the training manuals, further familiarizing ourselves with the document workflows and used the information in the manuals to ensure that the new CPACS continued to enable its users to do what they currently do, except with a smoother experience.
-        </Typography>
+        <div className={classes.grid}>
+          <img src="/CPACSweb/Budget_process_before.jpg"
+                alt="budget process before"
+                className={classes.grid__span6}/>
+        </div>
       </div>
     );
   }
 }
+
+export default withStyles(styles)(Understand);

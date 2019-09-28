@@ -6,7 +6,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": "column",
-    "margin-top": "2em",
+    "margin-bottom": "100px"
   },
   img: {
     "max-width": "100%",
@@ -23,17 +23,38 @@ class Analyze extends Component {
           Analyze
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography gutterBottom style={{ marginBottom: "0px" }}>
           <b>
-          Such a large system required us to divide and conquer to work efficiently.   
+            The form requires prior knowledge from the users.
           </b>
+          <br/>
+          A budget form will have numbers and numbers mean math. CPACS comes with
+          a user manual that teaches users the calculations that need to take
+          place for each number they enter. However, why should everyone have to
+          read a thick book to understand the basics of finances?
+          <br/>
+          <br/>
+
+          <b>
+            The form asks unnecessary questions.
+          </b>
+          <br/>
+          Before the user even begins to fill out any form, they have to answer
+          questions that will determine which form they will be filling out.
+          However, if we just waited to see what a user fills out on their form,
+          we’ll be able to tell what kind of form they want to submit.
+          <br/>
+          <br/>
+
+          <b>
+          The form is not consistent with business standards.
+          </b>
+          Users are required to select a costcenter as part of the process of
+          starting a funding request, supplemental budget, and budget
+          modification. Projects only have one costcenter.
         </Typography>
 
-        <Typography variant="body1" style={{ paddingBottom: "2em" }}>
-        The redesign of CPACS happened in modules. The system is a large one, consisting of many different workflows for each document that exists.
-        </Typography>
 
-        <img className={classes.img} alt="CPACS Divide and Conquer diagram" src="/CPACSweb/Frame.png" />
       </div>
     );
   }
