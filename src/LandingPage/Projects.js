@@ -11,7 +11,7 @@ const styles = theme => ({
     "align-items": "center",
   },
   projectOverview: {
-    width: "940px",
+    "max-width": "940px",
     display: "grid",
     "grid-template-columns": "repeat(2, 1fr)",
     "grid-template-rows": "auto",

@@ -14,7 +14,7 @@ const styles = theme => ({
     "align-items": "center",
   },
   content:{
-    width: "940px",
+    "max-width": "940px",
   },
   about__photo:{
     width: "100%",
