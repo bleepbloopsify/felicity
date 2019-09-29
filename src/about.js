@@ -1,8 +1,6 @@
+import { Typography, withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core';
 import Navbar from './LandingPage/Navbar';
-import { Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 
 const styles = theme => ({
@@ -65,7 +63,7 @@ class AboutMe extends Component {
           <Navbar />
         </header>
         <main className={classes.content}>
-          <img src="/my_photo.jpg" className={classes.about__photo}/>
+          <img alt="Felicity" src="/my_photo.jpg" className={classes.about__photo}/>
           <Typography gutterBottom>
           <b>Hello! I’m Felicity…</b>
           <br/>
