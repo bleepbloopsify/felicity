@@ -1,21 +1,18 @@
-import React from 'react';
-import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import { ThemeProvider } from '@material-ui/styles';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import 'typeface-itim';
 import 'typeface-karla';
-import 'typeface-muli';
 import 'typeface-montserrat';
-
-
-import './App.css';
-
-import LandingPage from './LandingPage';
+import 'typeface-muli';
 import AboutMe from './about';
+import './App.css';
+import LandingPage from './LandingPage';
 import CPACS from './projects/CPACS';
 import Packages from './projects/Packages';
 import Scribble from './projects/Scribble';
+import ScrollToTopRouter from './ScrollToTopRouter';
 
 const theme = createMuiTheme({
   palette: {
@@ -59,12 +56,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/work" component={null} />
-        <Route path="/about" component={AboutMe} />
-        <Route path={CPACS.PROJECT_LINK} component={CPACS} />
-        <Route path={Packages.PROJECT_LINK} component={Packages} />
-        <Route path={Scribble.PROJECT_LINK} component={Scribble} />
+        <ScrollToTopRouter exact path="/" component={LandingPage} />
+        <ScrollToTopRouter path="/work" component={null} />
+        <ScrollToTopRouter path="/about" component={AboutMe} />
+        <ScrollToTopRouter path={CPACS.PROJECT_LINK} component={CPACS} />
+        <ScrollToTopRouter path={Packages.PROJECT_LINK} component={Packages} />
+        <ScrollToTopRouter path={Scribble.PROJECT_LINK} component={Scribble} />
       </Router>
     </ThemeProvider>
   );

@@ -1,7 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Jumbotron from './Jumbotron';
 import Navbar from './Navbar';
 import Projects from './Projects';

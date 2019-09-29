@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
-import { withStyles } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+import React, { Component } from 'react';
 import Navbar from '../LandingPage/Navbar';
-import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": 'column',
-  },
-  footer: {
-    height: "10em",
-    "background-color": "#F5FDFF",
-    "padding-left": "5em",
-    "padding-top": "3em",
-    "padding-right": "5em",
-    "margin-top": "10em",
   },
   footer: {
     width: "100%",
