@@ -164,7 +164,7 @@ class CPACS extends Component {
                       <Link to="/projects/scribblenyc" className={classes.otherProjects__grid__span4}>
                         <img alt="Scribble NYC Logo"
                             className={classes.otherProjects__grid__span4__photo}
-                            src="/Scribble/Scribble jumbotron-01.png"></img>
+                            src="/Scribble/centered_swag.jpg"></img>
                       </Link>
                     </div>
                   </div>

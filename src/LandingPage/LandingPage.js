@@ -47,22 +47,20 @@ class LandingPage extends Component {
         <Jumbotron />
         <Projects />
 
-        <div className={classes.footer}>
+        <footer className={classes.footer}>
           <Typography variant="h1" color="primary">
             felicity.ng@nyu.edu
           </Typography>
-
-          {/* Put logos here */}
           <div>
-            <Link to="https://github.com/felicitypictures">
+            <a href="https://github.com/felicitypictures" target="_blank" rel="noopener noreferrer">
               <img alt="github icon" src="/github_icon.png" className={classes.footer__icon}></img>
-            </Link>
+            </a>
 
-            <Link to="https://www.linkedin.com/in/felicity-ng/">
+            <a href="https://www.linkedin.com/in/felicity-ng/" target="_blank" rel="noopener noreferrer">
               <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
-            </Link>
+            </a>
           </div>
-        </div>
+        </footer>
 
       </div>
     );

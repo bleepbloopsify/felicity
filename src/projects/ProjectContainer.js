@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
 import Navbar from '../LandingPage/Navbar';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   root: {
@@ -16,12 +17,23 @@ const styles = theme => ({
     "padding-right": "5em",
     "margin-top": "10em",
   },
-  footerLogos: {
-    "float": "right",
+  footer: {
+    width: "100%",
+    height: "10em",
+    "background-color": "#F5FDFF",
+    "padding": "70px 50px",
+    display: "flex",
+    "flex-direction": "row",
+    "justify-content": "space-between",
+    "align-items": "center",
+    "box-sizing": "border-box",
+    "margin-top": "80px",
   },
-  footerLogoItem: {
-    "padding-left": "5em",
-  },
+  footer__icon: {
+    "margin-left": "30px",
+    width: "26px",
+    height: "auto",
+  }
 });
 
 /**
@@ -41,19 +53,20 @@ class ProjectContainer extends Component {
 
         {children}
 
-        {/* Footer */}
-        <div className={classes.footer}>
+        <footer className={classes.footer}>
           <Typography variant="h1" color="primary">
             felicity.ng@nyu.edu
           </Typography>
+          <div>
+            <a href="https://github.com/felicitypictures" target="_blank" rel="noopener noreferrer">
+              <img alt="github icon" src="/github_icon.png" className={classes.footer__icon}></img>
+            </a>
 
-          {/* Put logos here */}
-          <div className={classes.footerLogos}>
-            <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem} href="https://github.com/FelicityPictures">Github</a>
-
-            <a target="_blank" rel="noopener noreferrer" className={classes.footerLogoItem} href="https://www.linkedin.com/in/felicity-ng">Linkedin</a>
+            <a href="https://www.linkedin.com/in/felicity-ng/" target="_blank" rel="noopener noreferrer">
+              <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
+            </a>
           </div>
-        </div>
+        </footer>
       </div>
     );
   }

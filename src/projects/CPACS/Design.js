@@ -19,6 +19,7 @@ const styles = theme => ({
     height: "auto",
     "grid-column": "span 6",
     "grid-row": "span 1",
+    "border": "1px solid #ccc"
   }
 });
 
