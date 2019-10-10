@@ -9,6 +9,7 @@ const styles = theme => ({
   },
   grid: {
     width: "100%",
+    "margin-top": "20px",
     display: "grid",
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",

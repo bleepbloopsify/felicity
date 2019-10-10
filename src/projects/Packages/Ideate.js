@@ -9,16 +9,26 @@ const styles = theme => ({
   },
   grid: {
     width: "100%",
+    "margin-top": "20px",
     display: "grid",
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
+    "grid-row-gap": "40px",
   },
   grid__span6: {
     width: "100%",
     height: "auto",
-    "grid-column": "span 6",
+    "margin": "0px",
+    "grid-column": "4 / span 6",
     "grid-row": "span 1",
+  },
+  grid__span6__image:{
+    width: "100%",
+  },
+  grid__span6__caption:{
+    "text-align": "center",
+    "font-size": "12px",
   }
 });
 
@@ -56,9 +66,14 @@ class Ideate extends Component {
           and incorporating tools to make data entry easier.
         </Typography>
         <div className={classes.grid}>
-          <img src="/Packages/process_after.jpg"
-                alt="process after"
-                className={classes.grid__span6}/>
+          <figure className={classes.grid__span6}>
+            <img src="/Packages/journey_map.png"
+                  alt="journey map of new packages process"
+                  className={classes.grid__span6__image}/>
+            <figcaption className={classes.grid__span6__caption}>
+              Journey map to demonstrate the new packages process
+            </figcaption>
+          </figure>
         </div>
       </div>
     );

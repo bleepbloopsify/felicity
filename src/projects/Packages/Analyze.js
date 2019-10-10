@@ -10,16 +10,26 @@ const styles = theme => ({
   },
   grid: {
     width: "100%",
+    "margin-top": "20px",
     display: "grid",
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
+    "grid-row-gap": "40px",
   },
   grid__span6: {
     width: "100%",
     height: "auto",
-    "grid-column": "span 6",
+    "margin": "0px",
+    "grid-column": "4 / span 6",
     "grid-row": "span 1",
+  },
+  grid__span6__image:{
+    width: "100%",
+  },
+  grid__span6__caption:{
+    "text-align": "center",
+    "font-size": "12px",
   }
 });
 
@@ -77,9 +87,22 @@ class Analyze extends Component {
           sits unused on a shelf.
         </Typography>
         <div className={classes.grid}>
+        <figure className={classes.grid__span6}>
           <img src="/Packages/process_before.jpg"
                 alt="packages process before"
-                className={classes.grid__span6}/>
+                className={classes.grid__span6__image}/>
+          <figcaption className={classes.grid__span6__caption}>
+            Current process for getting packages
+          </figcaption>
+        </figure>
+        <figure className={classes.grid__span6}>
+          <img src="/Packages/empathy_map.png"
+                alt="empathy map for mailroom employees"
+                className={classes.grid__span6__image}/>
+          <figcaption className={classes.grid__span6__caption}>
+            Empathy map to better understand the mailroom employees
+          </figcaption>
+        </figure>
         </div>
 
       </div>
