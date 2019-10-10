@@ -35,7 +35,7 @@ class Understand extends Component {
 
         <Typography gutterBottom>
           <b>CPACS houses the university’s capital projects. Each project consists
-          of multiple modules. I redesigned the budget module.</b>
+          of multiple modules. One of the modules I redesigned was the budget module.</b>
           <br/>
           The product owner needed to give the budget module a facelift as well
           as smooth out the process of filling out the forms in the budget modules.
