@@ -1,3 +1,22 @@
+# Felicity's Portfolio
+
+# Building
+
+### `npm run build`
+
+# Deploying
+
+We host this project with s3 and cloudfront, so if you have IAM credentials, its simple to just
+
+### `aws s3 sync build/ s3://felicity.dev`
+
+this will update the actual site, and now you have to invalidate the cache in cloudfront so we don't cache index.html and have bad references.
+Its worth noting that there will be some downtime because of this, and so it might be better to have an actual styled webpage in place while we're actually upgrading the site. (Maybe we should also semver on the actual site so we have some way of telling which version of the site we're actually looking at without being confused and checking hashes).
+
+
+
+### Everything below this line is from `create-react-app`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
