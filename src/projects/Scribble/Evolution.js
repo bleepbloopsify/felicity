@@ -40,21 +40,15 @@ class Evolution extends Component {
         </Typography>
 
         <Typography gutterBottom>
-          <b>The logo was central but the branding was allowed flexibility to
-          change every year.
+          <b>As I worked on the event's branding, I came to realize the value of such a workshop and pushed to expand the event into something much more meaningful.
           </b>
           <br/>
-          I started with Scribble as a student part timer with the department
-          and Scribble will probably continue to be organized by more students
-          in the future, after I move on from OTSS. I was given the opportunity
-          to develop the vision for the event while learning and growing from it
-          as well. I hope in the future, the event will do the same for other
-          tudents. I wanted the project to be a fun, creative projects, where
-          students working on it can showcase their skills. The logo holds the
-          central ideas of creativity, community, and organic development but I
-          left the branding open ended. Each year, a new student will help
-          organize the event and each year, they will have the opportunity to
-          brand the event however they want.
+          Now, Scribble NYC is a day dedicated to learning about the intersection of design and technology through hands-on, interactive workshops and later on in the day, a design-a-thon. While the event was previously targetted to students in our K12 program, it is now open to all that want to learn. The design-a-thon portion is only open to middle school and high school students but adults, especially teachers, attend our workshops to learn more about design thinking and how to bring it into their everyday lives.
+          <br/>
+          <br/>
+          I started with Scribble as a student part timer with the department. After I graduate, Scribble will probably continue to be organized by more students. I wanted the event to be an outlet for students to showcase their skills. With that, I created the logo to hold the central ideas of creativity, community, and organic development but I left the branding open ended. Each year, a new student will help organize the event and each year, they will have the opportunity to brand the event however they want.
+
+
         </Typography>
       </div>
     );

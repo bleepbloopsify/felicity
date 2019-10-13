@@ -52,8 +52,7 @@ class Jumbotron extends Component {
         <div className={classes.grid}>
           <img alt="" className={classes.grid__span6__image} src="/Scribble/scribble_logo.png"></img>
           <p className={classes.grid__span6__text__top}>
-          Scribble is a day of design hosted by NYU IT OTSS that aims to expose
-          young minds to the world of technology, espcially product design.
+          Scribble NYC is an event hosted by NYU IT OTSS that aims to expose young minds to the world of technology through design thinking.
           </p>
           <div className={classes.grid__span6__text__roles}>
             <Typography>
@@ -72,7 +71,7 @@ class Jumbotron extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              Organizer
+              Founder
             </Typography>
           </div>
           <div className={classes.grid__span6__text__roles__bottom}>

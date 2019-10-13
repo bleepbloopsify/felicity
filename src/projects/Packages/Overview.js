@@ -65,7 +65,7 @@ class Overview extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              UX/UI Designer
+              Product Designer
             </Typography>
           </div>
           <div className={classes.tableItemSpan4}>
@@ -75,7 +75,7 @@ class Overview extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              December 2018 - Present
+              March 2019 - Present
             </Typography>
           </div>
         </div>
@@ -95,9 +95,9 @@ class Overview extends Component {
             </div>
             <center>
               <Typography variant="body2" className={classes.processDetails}>
-                Observe
+                Observe users
                 <br/>
-                Pain points
+                Identify pain points
               </Typography>
             </center>
           </div>

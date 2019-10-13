@@ -53,8 +53,7 @@ class LearnMore extends Component {
         </Typography>
 
         <Typography gutterBottom>
-          <b>The website was redesigned the second year and will be updated with
-          each year with the new designs.
+          <b>The website was redesigned for 2019 (its second year) by me again.
           </b>
         </Typography>
         <a className={classes.button} href="http://www.scribblenyc.nyu.edu" target="_blank" rel="noopener noreferrer">

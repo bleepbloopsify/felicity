@@ -66,7 +66,7 @@ class Overview extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              UX/UI Designer
+              Product Designer
             </Typography>
           </div>
           <div className={classes.tableItemSpan4}>
@@ -98,7 +98,7 @@ class Overview extends Component {
             </div>
             <center>
               <Typography variant="body2" className={classes.processDetails}>
-                Study Context<br />Interviews
+                Context study<br/>Self testing
               </Typography>
             </center>
           </div>
@@ -118,7 +118,7 @@ class Overview extends Component {
             </div>
             <center>
               <Typography variant="body2" className={classes.processDetails}>
-                Design Principles<br />Workflow Diagrams
+                Design Principles<br/>Workflow Diagrams
               </Typography>
             </center>
           </div>
@@ -128,7 +128,7 @@ class Overview extends Component {
             </div>
             <center>
               <Typography variant="body2" className={classes.processDetails}>
-                Wireframes<br />Mockups<br />Prototypes
+                Wireframes<br/>Mockups<br />Prototypes
               </Typography>
             </center>
           </div>
@@ -148,7 +148,7 @@ class Overview extends Component {
             </div>
             <center>
               <Typography variant="body2" className={classes.processDetails}>
-                Assess Feedback<br />Fix Details
+                Assess Feedback<br />Looking towards the future
               </Typography>
             </center>
           </div>

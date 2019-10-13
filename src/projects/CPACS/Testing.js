@@ -20,29 +20,18 @@ class Testing extends Component {
         </Typography>
         <Typography gutterBottom>
           <b>
-          User interviews revealed to us that we should have a partial save for forms.
+          While the design team wasn’t allowed to do user research until midway through the redesign of the budget module, we made the best of it when we were finally given the permission.
           </b>
           <br/>
-          During our user interviews, we were informed that occasionally, when
-          users are filling out forms, they might need to stop because they
-          don’t have all the information. However, the system does not allow
-          partial saves, as all essential parts of the form need to be filled
-          out before it can be saved. We pushed to add an autosave function to
-          the system to alleviate this frustration.
+          Due to the delay in user research, we had to backtrack through the other modules that we already “finished” redesigning to ensure our prototypes were actually improvements to the current system. There were still delays and obstacles to get ahold of the users but we were able to get a hold of four CPACS users to interview.
           <br/>
           <br/>
 
           <b>
-          If a user makes a mistake and only realizes after they have submitted,
-          they should be able to recall the document.
+          During the user interviews, we asked the users about their overall experience with CPACS and then tested our new designs on them, showing them only the modules they are familiar with.
           </b>
           <br/>
-          Many documents in CPACS have to go through a chain of approval. This
-          can be a slow process. If the submitter catches a mistake, it can be
-          slow and frustrating to track down the person the document is waiting
-          on and inform them of the mistake so that the approver can return the
-          document back to the submitter to fix. Instead, a recall button can
-          speed this process up.
+          Users in CPACS don’t all use the same modules, so we had to be flexible during our user interviews and only ask them about the modules that they know about. The project manager had scheduled the module redesigns nicely so that the team already had prototypes to show for all the different modules the interviewees work with on a daily basis.
         </Typography>
       </div>
     );

@@ -96,11 +96,14 @@ class Projects extends Component {
           <img alt="Cpacs mockup" src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo} />
 
           <div className={classes.projectOverview__info}>
-            <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
-            <h1 className={classes.projectOverview__title}>CPACS Funding Request</h1>
+            <h2 className={classes.projectOverview__eyebrows}>
+            Product design
+            </h2>
+            <h1 className={classes.projectOverview__title}>
+            CPACS Budget Module
+            </h1>
             <p className={classes.projectOverview__description}>
-              Analyzing business needs to redesign a legacy enterprise system
-              for managing capital projects.
+              It started off as a redesign of the current system but with more user research, the focus of the project shifted to improving the system that we already have.
             </p>
             <Link to="/projects/cpacs">
               <button className={classes.projectOverview__button}>
@@ -115,7 +118,7 @@ class Projects extends Component {
           <img alt="Scribble Mockup" src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
           <div className={classes.projectOverview__info}>
-            <h2 className={classes.projectOverview__eyebrows}>Branding</h2>
+            <h2 className={classes.projectOverview__eyebrows}>Founder</h2>
             <h1 className={classes.projectOverview__title}>Scribble NYC</h1>
             <p className={classes.projectOverview__description}>
               A design forum and design-a-thon targetted towards middle school
