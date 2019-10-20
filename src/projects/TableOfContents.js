@@ -7,7 +7,10 @@ const styles = theme => ({
     "height": "30vh",
     "top": "10em",
     "padding": "0px 25px",
-    "width": "100px"
+    "width": "100px",
+    [theme.breakpoints.down('md')]: {
+      "display": "none",
+    },
   },
   tableOfContents: {
     "border-left": "solid #880A56",

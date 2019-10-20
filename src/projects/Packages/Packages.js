@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProjectContainer from '../ProjectContainer';
 import Jumbotron from './Jumbotron';
 import { TableOfContents, TableOfContentsItem } from '../TableOfContents';
+
 import uparrow from '../../uparrow.svg';
 import { Sections, Section } from '../../Sections';
 import Overview from './Overview';
@@ -33,7 +34,12 @@ const styles = theme => ({
     "display":"flex",
     "flex-direction": "row",
     "flex-wrap": "nowrap",
-    "margin-top": "70px"
+    "margin-top": "70px",
+    [theme.breakpoints.down('md')]: {
+      "margin-top": "20px",
+      "padding": "0px 20px",
+      "box-sizing": "border-box",
+    },
   },
   otherProjects: {
     "border-top": "1px solid black",
@@ -51,10 +57,14 @@ const styles = theme => ({
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
+    "grid-row-gap": "20px",
   },
   otherProjects__grid__span4: {
       "grid-column": "span 4",
       "grid-row": "span 1",
+      [theme.breakpoints.down('md')]: {
+          "grid-column": "span 12",
+      },
   },
   otherProjects__grid__span4__photo: {
       width: "100%",

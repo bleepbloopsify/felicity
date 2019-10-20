@@ -2,29 +2,13 @@ import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 import Navbar from '../LandingPage/Navbar';
+import Footer from '../footer';
 
 const styles = theme => ({
   root: {
     display: "flex",
     "flex-direction": 'column',
   },
-  footer: {
-    width: "100%",
-    height: "10em",
-    "background-color": "#F5FDFF",
-    "padding": "70px 50px",
-    display: "flex",
-    "flex-direction": "row",
-    "justify-content": "space-between",
-    "align-items": "center",
-    "box-sizing": "border-box",
-    "margin-top": "80px",
-  },
-  footer__icon: {
-    "margin-left": "30px",
-    width: "26px",
-    height: "auto",
-  }
 });
 
 /**
@@ -44,20 +28,7 @@ class ProjectContainer extends Component {
 
         {children}
 
-        <footer className={classes.footer}>
-          <Typography variant="h1" color="primary">
-            felicity.ng@nyu.edu
-          </Typography>
-          <div>
-            <a href="https://github.com/felicitypictures" target="_blank" rel="noopener noreferrer">
-              <img alt="github icon" src="/github_icon.png" className={classes.footer__icon}></img>
-            </a>
-
-            <a href="https://www.linkedin.com/in/felicity-ng/" target="_blank" rel="noopener noreferrer">
-              <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }

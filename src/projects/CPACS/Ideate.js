@@ -9,16 +9,25 @@ const styles = theme => ({
   },
   grid: {
     width: "100%",
+    "margin-top": "20px",
     display: "grid",
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
+    "grid-row-gap": "40px",
+    [theme.breakpoints.down('md')]: {
+      "grid-template-columns": "repeat(6, 1fr)",
+    },
   },
   grid__span6: {
     width: "100%",
     height: "auto",
-    "grid-column": "span 6",
+    "margin": "0px",
+    "grid-column": "4 / span 6",
     "grid-row": "span 1",
+    [theme.breakpoints.down('md')]: {
+      "grid-column": "1 / span 6",
+    },
   }
 });
 

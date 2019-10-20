@@ -18,14 +18,25 @@ const styles = theme => ({
     "grid-column-gap": "20px",
     "grid-auto-flow": "dense",
     "margin-top": "90px",
+    [theme.breakpoints.down('md')]: {
+      "width": "100%",
+      "padding": "0px 10px",
+      "display": "flex",
+      "justify-content": "center",
+      "align-items": "center",
+      "flex-direction": "column",
+      "box-sizing": "border-box",
+      "margin": "20px 0px",
+    },
   },
   projectOverview__info: {
+    width: "100%",
     "grid-column": "span 1",
     "grid-row": "span 1",
     "grid-column-start": "1",
     display: "flex",
     "justify-content": "flex-start",
-    "align-content": "flex-start",
+    "align-items": "flex-start",
     "flex-direction": "column",
   },
   projectOverview__eyebrows: {
@@ -45,6 +56,9 @@ const styles = theme => ({
     "font-family": "'Muli', sans-serif",
     "font-size": "16px",
     "margin": "30px 0px",
+    [theme.breakpoints.down('md')]: {
+      "margin": "15px 0px",
+    },
   },
   projectOverview__button: {
     "all": "unset",

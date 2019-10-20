@@ -10,6 +10,11 @@ const styles = theme => ({
     display: "flex",
     "align-items": "center",
     "justify-content": "center",
+    "box-sizing": "border-box",
+    [theme.breakpoints.down('md')]: {
+      "height": "auto",
+      "padding": "70px 20px 20px 20px",
+    },
   },
   grid: {
     width: "940px",
@@ -18,6 +23,12 @@ const styles = theme => ({
     "grid-template-rows": "50% 25% 25%",
     "grid-column-gap": "20px",
     "align-items": "center",
+    [theme.breakpoints.down('md')]: {
+      "grid-template-columns": "repeat(3, 1fr)",
+      "align-items": "center",
+      "grid-template-rows": "auto",
+      "grid-row-gap": "20px",
+    },
   },
   grid__span6__image: {
     "padding": "20px",
@@ -25,12 +36,18 @@ const styles = theme => ({
     "grid-column": "span 6",
     "grid-row": "span 3",
     width: "100%",
-    height: "auto"
+    height: "auto",
+    [theme.breakpoints.down('md')]: {
+      "grid-column": "span 3",
+    },
 },
   grid__span6__text__top: {
     "grid-column": "span 6",
     "grid-row": "span 1",
     "align-self": "end",
+    [theme.breakpoints.down('md')]: {
+      "grid-column": "span 3",
+    },
   },
   grid__span6__text__roles: {
     "grid-column": "span 3",

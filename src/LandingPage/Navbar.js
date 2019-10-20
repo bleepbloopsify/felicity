@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 const styles = theme => ({
   nav: {
     'width': '100%',
+    "max-height": "70px",
     'position': 'fixed',
     'top': '0px',
     'left': '0px',
@@ -12,14 +13,20 @@ const styles = theme => ({
     'display': 'flex',
     'flex-direction': 'row',
     'justify-content': 'space-between',
-    'align-content': 'center',
-    'background-color': '#F5FDFF'
+    'align-items': 'center',
+    'background-color': '#F5FDFF',
+    [theme.breakpoints.down('md')]: {
+      "padding": "20px",
+    },
   },
   nav__name: {
     'textDecorationLine': 'none',
     'fontSize': '36px',
     'font-family': "'Itim', cursive",
-    'color': '#D772AF'
+    'color': '#D772AF',
+    [theme.breakpoints.down('md')]: {
+      "fontSize": "22px",
+    },
   },
   nav__rightSide: {
     'display': 'flex',
@@ -32,7 +39,10 @@ const styles = theme => ({
     'font-size': '18px',
     'color': 'black',
     'margin-left': '55px',
-    'align-self': 'center'
+    [theme.breakpoints.down('md')]: {
+      "fontSize": "12px",
+      'margin-left': '30px',
+    },
   }
 });
 

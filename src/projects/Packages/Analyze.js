@@ -16,6 +16,9 @@ const styles = theme => ({
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
     "grid-row-gap": "40px",
+    [theme.breakpoints.down('md')]: {
+      "grid-template-columns": "repeat(6, 1fr)",
+    },
   },
   grid__span6: {
     width: "100%",
@@ -23,6 +26,9 @@ const styles = theme => ({
     "margin": "0px",
     "grid-column": "4 / span 6",
     "grid-row": "span 1",
+    [theme.breakpoints.down('md')]: {
+      "grid-column": "1 / span 6",
+    },
   },
   grid__span6__image:{
     width: "100%",

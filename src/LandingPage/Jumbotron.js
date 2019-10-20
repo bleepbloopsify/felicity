@@ -25,12 +25,18 @@ const styles = theme => ({
     'font-size': '72px',
     "color": "#D772AF",
     "margin-top": "11px",
+    [theme.breakpoints.down('md')]: {
+      "font-size": "40px",
+    },
   },
   centerCaption: {
     'font-family': 'Muli',
     'font-style': 'normal',
     'font-size': '18px',
     'color': '#333333',
+    [theme.breakpoints.down('md')]: {
+      "font-size": "12px",
+    },
   },
   avatar: {
     width: "88px",

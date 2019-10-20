@@ -13,6 +13,10 @@ const styles = theme => ({
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
+    "grid-row-gap": "20px",
+    [theme.breakpoints.down('md')]: {
+      "grid-template-columns": "repeat(6, 1fr)",
+    },
   },
   grid__span6__row1: {
     width: "100%",

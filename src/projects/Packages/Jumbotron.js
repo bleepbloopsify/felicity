@@ -9,9 +9,18 @@ const styles = theme => ({
     display: "flex",
     "align-items": "center",
     "justify-content": "center",
+    "box-sizing": "border-box",
+    [theme.breakpoints.down('md')]: {
+      "height": "auto",
+      "padding": "70px 20px 20px 20px",
+    },
   },
   img: {
     "max-height": "24em",
+    [theme.breakpoints.down('md')]: {
+      "max-width": "100%",
+      "height": "auto",
+    },
   }
 });
 

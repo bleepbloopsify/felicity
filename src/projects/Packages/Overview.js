@@ -11,7 +11,11 @@ const styles = theme => ({
     "grid-template-columns": "repeat(12, 1fr)",
     "grid-template-rows": "auto",
     "grid-column-gap": "20px",
-    "padding-bottom": "2em",
+    "grid-row-gap": "10px",
+    "padding-bottom": "40px",
+    [theme.breakpoints.down('md')]: {
+    "grid-template-columns": "repeat(4, 1fr)",
+    },
   },
   tableItemSpan4: {
     "grid-column": "span 4",
@@ -29,7 +33,7 @@ const styles = theme => ({
     "font-size": "16px"
   },
   fancyBubble: {
-    "padding": "15px 20px",
+    "padding": "15px 10px",
     "border-radius": "4px",
     "text-align": "center",
     "font-family": "'Karla', sans-serif",
@@ -88,7 +92,7 @@ class Overview extends Component {
           </center>
         </div>
 
-        <div className={classes.table} style={{ paddingTop: "2em" }}>
+        <div className={classes.table} style={{ paddingTop: "20px" }}>
           <div className={classes.tableItemSpan2}>
             <div className={classes.fancyBubble} style={{ backgroundColor: "#D8F6C6" }}>
               Understand

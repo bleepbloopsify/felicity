@@ -1,6 +1,7 @@
 import { Typography, withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
 import Navbar from './LandingPage/Navbar';
+import Footer from './footer';
 
 
 const styles = theme => ({
@@ -13,11 +14,19 @@ const styles = theme => ({
   },
   content:{
     "max-width": "940px",
+    [theme.breakpoints.down('md')]: {
+      "width": "100%",
+      "padding": "70px 20px 0px 20px",
+      "box-sizing": "border-box",
+    },
   },
   about__photo:{
     width: "100%",
     height: "auto",
     "margin-bottom": "50px",
+    [theme.breakpoints.down('md')]: {
+      "margin-bottom": "20px",
+    },
   },
   button: {
     "all": "unset",
@@ -32,23 +41,6 @@ const styles = theme => ({
     "border-radius": "50px",
     "cursor": "pointer",
   },
-  footer: {
-    width: "100%",
-    height: "10em",
-    "background-color": "#F5FDFF",
-    "padding": "70px 50px",
-    display: "flex",
-    "flex-direction": "row",
-    "justify-content": "space-between",
-    "align-items": "center",
-    "box-sizing": "border-box",
-    "margin-top": "80px",
-  },
-  footer__icon: {
-    "margin-left": "30px",
-    width: "26px",
-    height: "auto",
-  }
 });
 
 
@@ -103,20 +95,7 @@ class AboutMe extends Component {
           </a>
         </main>
 
-        <footer className={classes.footer}>
-          <Typography variant="h1" color="primary">
-            felicity.ng@nyu.edu
-          </Typography>
-          <div>
-            <a href="https://github.com/felicitypictures" target="_blank" rel="noopener noreferrer">
-              <img alt="github icon" src="/github_icon.png" className={classes.footer__icon}></img>
-            </a>
-
-            <a href="https://www.linkedin.com/in/felicity-ng/" target="_blank" rel="noopener noreferrer">
-              <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
-            </a>
-          </div>
-        </footer>
+        <Footer />
 
       </div>
     );
