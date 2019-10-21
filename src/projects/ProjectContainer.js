@@ -1,4 +1,3 @@
-import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 import Navbar from '../LandingPage/Navbar';
