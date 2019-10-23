@@ -1,5 +1,6 @@
 import { withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   nav: {
@@ -52,10 +53,10 @@ class Navbar extends Component {
 
     return (
       <nav className={classes.nav}>
-        <a className={classes.nav__name} href="/">felicity ng</a>
+        <Link className={classes.nav__name} to="/">felicity ng</Link>
         <div className={classes.nav__rightSide}>
-          <a href="/" className={classes.nav__rightSide__a}>Home</a>
-          <a href="/about" className={classes.nav__rightSide__a}>About Me</a>
+          <Link to="/"className={classes.nav__rightSide__a}>Home</Link>
+          <Link to="/about"className={classes.nav__rightSide__a}>About Me</Link>
         </div>
       </nav>
     );
