@@ -6,7 +6,24 @@ const styles = theme => ({
     display: "flex",
     "flex-direction": "column",
     "margin-bottom": "100px"
-  }
+  },
+  grid: {
+    width: "100%",
+    display: "grid",
+    "grid-template-columns": "repeat(12, 1fr)",
+    "grid-template-rows": "auto",
+    "grid-column-gap": "20px",
+    "grid-row-gap": "20px",
+    [theme.breakpoints.down('md')]: {
+      "grid-template-columns": "repeat(3, 1fr)",
+    },
+  },
+  grid__span3: {
+    width: "100%",
+    height: "auto",
+    "grid-column": "span 3",
+    "grid-row": "span 1",
+  },
 });
 
 class Testing extends Component {
@@ -46,6 +63,20 @@ class Testing extends Component {
           nuisance. We presented our designs and ideas at a resident meeting and
           gathered feedback.
         </Typography>
+        <div className={classes.grid}>
+          <img src="/Packages/test1.png"
+                alt=""
+                className={classes.grid__span3}/>
+          <img src="/Packages/test2.png"
+                alt=""
+                className={classes.grid__span3}/>
+          <img src="/Packages/test3.png"
+                alt=""
+                className={classes.grid__span3}/>
+          <img src="/Packages/test4.png"
+                alt=""
+                className={classes.grid__span3}/>
+        </div>
       </div>
     );
   }

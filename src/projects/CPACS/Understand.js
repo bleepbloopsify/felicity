@@ -31,6 +31,7 @@ const styles = theme => ({
   },
   grid__span6__image:{
     width: "100%",
+    "border": "1px solid #ccc",
   },
   grid__span6__caption:{
     "text-align": "center",
