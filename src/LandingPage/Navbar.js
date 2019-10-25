@@ -33,7 +33,14 @@ const styles = theme => ({
     'display': 'flex',
     'flex-direction': 'row'
   },
+
+// .link:hover:after{
+//   width: 100%;
+//   left: 0;
+//   background: #fff;
+// }
   nav__rightSide__a: {
+    "position": "relative",
     'text-decoration': 'none',
     'font-family': "'Karla', sans-serif",
     'font-weight': 'bold',
@@ -43,6 +50,22 @@ const styles = theme => ({
     [theme.breakpoints.down('md')]: {
       "fontSize": "12px",
       'margin-left': '30px',
+    },
+    "&:after": {
+      "content": "''",
+      "position": "absolute",
+      "width": "0; height: 2px",
+      "display": "block",
+      "margin-top": "2px",
+      "right": "0",
+      "background": "#333",
+      "transition": "width .15s ease",
+      "-webkit-transition": "width .2s ease",
+    },
+    "&:hover:after": {
+      "width": "100%",
+      "left": "0",
+      "background-color": "#333",
     },
   }
 });

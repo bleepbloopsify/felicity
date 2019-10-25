@@ -38,6 +38,10 @@ const styles = theme => ({
     "padding": "8px 0px",
     "border-radius": "50px",
     "cursor": "pointer",
+    "&:hover": {
+      "background-color": "#D772AF",
+      "color": "black",
+    }
   },
 });
 

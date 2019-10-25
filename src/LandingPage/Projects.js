@@ -70,7 +70,11 @@ const styles = theme => ({
     "text-align": "center",
     "width": "140px",
     "padding": "8px 0px",
-    "border-radius": "50px"
+    "border-radius": "50px",
+    "&:hover": {
+      "background-color": "#D772AF",
+      "color": "black",
+    }
   },
   projectOverview__photo: {
     "grid-column": "span 1",
@@ -91,7 +95,7 @@ class Projects extends Component {
           <img alt="Packages mockup" src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo} />
 
           <div className={classes.projectOverview__info}>
-            <h2 className={classes.projectOverview__eyebrows}>Product design</h2>
+            <h2 className={classes.projectOverview__eyebrows}>UX/UI Design</h2>
             <h1 className={classes.projectOverview__title}>Packages</h1>
             <p className={classes.projectOverview__description}>
               Taking a manual, paper-based process and converting it into a
@@ -111,7 +115,7 @@ class Projects extends Component {
 
           <div className={classes.projectOverview__info}>
             <h2 className={classes.projectOverview__eyebrows}>
-            Product design
+            UX/UI Design
             </h2>
             <h1 className={classes.projectOverview__title}>
             CPACS Budget Module
@@ -132,7 +136,7 @@ class Projects extends Component {
           <img alt="Scribble Mockup" src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
           <div className={classes.projectOverview__info}>
-            <h2 className={classes.projectOverview__eyebrows}>Founder</h2>
+            <h2 className={classes.projectOverview__eyebrows}>Branding</h2>
             <h1 className={classes.projectOverview__title}>Scribble NYC</h1>
             <p className={classes.projectOverview__description}>
               A design forum and design-a-thon targetted towards middle school
