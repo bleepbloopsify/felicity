@@ -183,7 +183,7 @@ class AboutMe extends Component {
                 <br/>
                 In a previous life, I might have been a bird.
                 <br/>
-                My horoscope is a scorpio.
+                My star sign is Scorpio.
                 <br/>
                 Of the sixteen personalities, I am a defender (ISFJ-T).
               </p>

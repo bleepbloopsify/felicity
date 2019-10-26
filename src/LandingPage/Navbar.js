@@ -78,8 +78,8 @@ class Navbar extends Component {
       <nav className={classes.nav}>
         <Link className={classes.nav__name} to="/">felicity ng</Link>
         <div className={classes.nav__rightSide}>
-          <Link to="/"className={classes.nav__rightSide__a}>Home</Link>
-          <Link to="/about"className={classes.nav__rightSide__a}>About Me</Link>
+          <Link to="/"className={classes.nav__rightSide__a}>home</Link>
+          <Link to="/about"className={classes.nav__rightSide__a}>about me</Link>
         </div>
       </nav>
     );
