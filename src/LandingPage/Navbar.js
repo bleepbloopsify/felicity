@@ -15,7 +15,8 @@ const styles = theme => ({
     'flex-direction': 'row',
     'justify-content': 'space-between',
     'align-items': 'center',
-    'background-color': '#F5FDFF',
+    // 'background-color': '#F5FDFF',
+    "background-image": "linear-gradient(#F5FDFF, rgba(255,255,255,0))",
     [theme.breakpoints.down('md')]: {
       "padding": "20px",
     },
@@ -25,6 +26,9 @@ const styles = theme => ({
     'fontSize': '36px',
     'font-family': "'Itim', cursive",
     'color': '#D772AF',
+    "background-color": "rgba(245, 253, 255, 0.5)",
+    "border-radius": "100px",
+    "padding": "5px 15px",
     [theme.breakpoints.down('md')]: {
       "fontSize": "22px",
     },
@@ -33,12 +37,6 @@ const styles = theme => ({
     'display': 'flex',
     'flex-direction': 'row'
   },
-
-// .link:hover:after{
-//   width: 100%;
-//   left: 0;
-//   background: #fff;
-// }
   nav__rightSide__a: {
     "position": "relative",
     'text-decoration': 'none',
@@ -47,6 +45,9 @@ const styles = theme => ({
     'font-size': '18px',
     'color': 'black',
     'margin-left': '55px',
+    "background-color": "rgba(245, 253, 255, 0.5)",
+    "border-radius": "100px",
+    "padding": "5px 10px",
     [theme.breakpoints.down('md')]: {
       "fontSize": "12px",
       'margin-left': '30px',

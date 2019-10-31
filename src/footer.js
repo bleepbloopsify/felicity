@@ -4,9 +4,9 @@ import { Typography, withStyles } from '@material-ui/core';
 const styles = theme => ({
   root: {
     width: "100%",
-    height: "10em",
+    height: "5em",
     "background-color": "#F5FDFF",
-    "padding": "70px 50px",
+    "padding": "50px 50px 70px 50px",
     display: "flex",
     "flex-direction": "row",
     "justify-content": "space-between",
@@ -30,7 +30,7 @@ const styles = theme => ({
   },
   footer__icon: {
     "margin-left": "30px",
-    width: "26px",
+    width: "20px",
     height: "auto",
       [theme.breakpoints.down('md')]: {
         "margin-left": "0px",
