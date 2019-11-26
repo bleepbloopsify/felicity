@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && aws s3 sync build/ s3://felicity.dev"
+    "deploy": "react-scripts build && aws s3 sync build/ s3://felicity.dev",
+    "dev-deploy": "react-scripts build && aws s3 sync build/ s3://dev.felicity.dev"
   },
   "eslintConfig": {
     "extends": "react-app"
