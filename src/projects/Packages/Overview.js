@@ -79,7 +79,7 @@ class Overview extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              March 2019 - Present
+              March 2019 - December 2019
             </Typography>
           </div>
         </div>

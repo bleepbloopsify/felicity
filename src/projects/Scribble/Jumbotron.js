@@ -98,7 +98,7 @@ class Jumbotron extends Component {
               </b>
             </Typography>
             <Typography variant="body1">
-              June 2018 - Present
+              June 2018 - November 2019
             </Typography>
           </div>
 
