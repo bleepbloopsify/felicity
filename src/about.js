@@ -59,7 +59,7 @@ const styles = theme => ({
   },
   p: {
     "font-family": "'Muli', sans-serif",
-    "font-size": "18px",
+    "font-size": "16px",
     "line-height": "2",
     "font-weight": "normal",
     "margin": "50px 0px 0px 0px",
@@ -102,67 +102,26 @@ class AboutMe extends Component {
             <img alt="Felcity's Avatar"
                  className={classes.avatar}
                  src="/felicity_avatar.png" />
-            <h1 className={classes.h1}>Heyo! Felicity here.</h1>
-            <h2 className={classes.h2}>Welcome to my little corner of the Internet.</h2>
+            <h1 className={classes.h1}>Hi there. I'm Felicity.</h1>
           </section>
           <section className={classes.aboutSection}>
             <p className={classes.p}>
-              I’m a product designer with a background in computer science. I will graduate from NYU Tandon in May 2020 with a Bachelor’s in computer science and minors in integrated digital media and game engineering.
+              Welcome to my little corner of the internet. I’m a product designer with a background in computer science. I graduated from NYU Tandon in May 2020 with a Bachelor’s in computer science and minors in integrated digital media and game engineering.
               <br/><br/>
-              Born and raised in New York, efficiency courses through my veins. My expertise lies in enterprise systems and B2B applications. Optimizing complex systems heavy with business needs while fighting for the experience of the end users is my jam.
-              <br/><br/>
-              Felicity means happiness and I love product design because I want to improve people’s lives.
+               I have experience working on enterprise systems and B2B applications during my time as a student UX/UI designer at NYU IT. Optimizing complex systems heavy with business needs while fighting for the experience of the end users is my jam. However, I've been exploring other fields and am currently deep in the e-commerce world, working on the Verizon.com experience with my agency, Publicis Sapient.
             </p>
           </section>
           <section className={classes.aboutSection}>
             <p className={classes.p}>
-              <b>Fun facts about me:</b>
-              <br/>
-              Cats, cats, cats! I have a slight obsession with cats.
-              <br/>
-              While a game has yet to ruin one of my friendships, there has been a number of close calls.
-              <br/>
-              Pink is my favorite color.
-              <br/>
-              I am the oldest of four children.
-              <br/>
-              In a previous life, I might have been a bird.
-              <br/>
-              My star sign is Scorpio.
-              <br/>
-              Of the sixteen personalities, I am a defender (ISFJ-T).
+              I was born and raised in New York, which has an overpopulation of cats. As they are my favorite animals, I want  do my part to help the overpopulation problem, so in my spare time, I rescue cats. I've only started doing it around the time of the pandemic but my current count of cats personally picked up off the streets and adopted out is 5 and I've TNR'd 10. (Note: This number has probably went up since the last time I've updated this website :P)
             </p>
           </section>
           <section className={classes.aboutSection}>
             <p className={classes.p}>
-            These are some of the classes I’ve taken that's helped me as a designer:
-            <br/>
-            <b>Design and aesthetic skillz</b>
-            <br/>
-            Visual foundation studio
-            <br/>
-            UX design
-            <br/>
-            3D modeling
-            <br/>
-            Photography
-            <br/><br/>
-            <b>Programming</b>
-            <br/>
-            Web development
-            <br/>
-            Artificial intelligence
-            <br/>
-            Game programming
-            <br/>
-            Software engineering
-            <br/>
-            Object oriented programming
-            <br/><br/>
-            If you want to know more about my experience, check out my resume here:
+            Learn more about my professional experience more by checking out my resume:
             </p>
             <a className={classes.button} href="https://github.com/FelicityPictures/Resume/blob/master/Resume.pdf" target="_blank" rel="noopener noreferrer">
-              Resume time
+              Resume!
             </a>
           </section>
         </main>

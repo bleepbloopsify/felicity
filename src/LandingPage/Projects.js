@@ -153,17 +153,16 @@ class Projects extends Component {
 
 
         <section className={classes.projectOverview}>
-          <img alt="OSIRIS mockup" src="/OSIRIS/OSIRIS_mockup.png" className={classes.projectOverview__photo}></img>
+          <img alt="OSIRIS mockup" src="/private_projects/Verizon_mockup.jpg" className={classes.projectOverview__photo}></img>
 
           <div className={classes.projectOverview__info}>
-            <h2 className={classes.projectOverview__eyebrows}>Branding</h2>
-            <h1 className={classes.projectOverview__title}>OSIRIS</h1>
+            <h2 className={classes.projectOverview__eyebrows}>UX/UI Design</h2>
+            <h1 className={classes.projectOverview__title}>Verizon</h1>
             <p className={classes.projectOverview__description}>
-              Establish new branding guidelines, create a website,
-              and growing the community presence.
+              Improve the verizon.com e-commerce experience to increase conversion.
             </p>
             <p className={classes.projectOverview__description}>
-              COMING SOON
+              Not available to the public eye
             </p>
           </div>
         </section>
