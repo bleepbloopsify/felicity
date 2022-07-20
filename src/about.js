@@ -11,10 +11,9 @@ const styles = theme => ({
     "flex-direction": "column",
     "justify-content": "flex-start",
     "align-items": "center",
-    // "background-color": "#F5FDFF",
   },
   content:{
-    width: "100%",
+    "max-width": "940px",
     "margin-top": "70px",
     display: "flex",
     "flex-direction": "column",
@@ -26,23 +25,32 @@ const styles = theme => ({
       "box-sizing": "border-box",
     },
   },
-  aboutSection:{
-    "max-width": "940px",
+  blurb:{
+    "width": "100%",
     display: "flex",
-    "flex-direction": "column",
+    "flex-direction": "row",
     "justify-content": "flex-start",
-    "align-items": "center",
-    "padding": "50px 0px 0px 0px",
-    "text-align": "center",
+    "align-items": "flex-start",
+    "padding": "0px",
     [theme.breakpoints.down('md')]: {
       "width": "100%",
       "padding": "0px 20px",
       "box-sizing": "border-box",
     },
   },
+  blurb__extra:{
+    "margin-top": "60px",
+  },
+  blurb__text:{
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "flex-start",
+    "align-items": "flex-start",
+  },
   avatar: {
-    width: "144px",
-    height: "148px",
+    width: "300px",
+    height: "auto",
+    "margin-right": "24px",
   },
   h1: {
     "font-family": "'Karla', sans-serif",
@@ -62,12 +70,11 @@ const styles = theme => ({
     "font-size": "16px",
     "line-height": "2",
     "font-weight": "normal",
-    "margin": "50px 0px 0px 0px",
+    "margin": "0px",
   },
   button: {
-    "max-width": "140px",
     "box-sizing": "border-box",
-    "margin-top": "10px",
+    "margin-top": "24px",
     "all": "unset",
     "font-family": "'Muli', sans-serif",
     "font-weight": "bold",
@@ -75,8 +82,7 @@ const styles = theme => ({
     "background-color": "#880A56",
     "color": "white",
     "text-align": "center",
-    "width": "140px",
-    "padding": "8px 30px",
+    "padding": "8px 16px",
     "border-radius": "50px",
     "cursor": "pointer",
     "&:hover": {
@@ -85,7 +91,6 @@ const styles = theme => ({
     }
   },
 });
-
 
 class AboutMe extends Component {
 
@@ -98,31 +103,38 @@ class AboutMe extends Component {
           <Navbar />
         </header>
         <main className={classes.content}>
-          <section className={classes.aboutSection}>
-            <img alt="Felcity's Avatar"
+          <section className={classes.blurb}>
+            <img alt="Felicity, an Asian American woman in her 20s, posing with her cat. Both are looking off into the distance"
                  className={classes.avatar}
-                 src="/felicity_avatar.png" />
-            <h1 className={classes.h1}>Hi there. I'm Felicity.</h1>
+                 src="/my_photo.jpg" />
+            <div className={classes.blurb__text}>
+              <h1 className={classes.h1}>Hey! Felicity here.</h1>
+              <p className={classes.p}>
+                I’m a product designer, born and raised in NYC. My background is in computer science and I like to think of myself as the bridge between designers and developers. I love diving into a juicy, complex problem while still remembering to bring the <i>fun</i> into the solution.
+                <br/>
+                While I’m not exploring ways to simplify complex flows, you can find me obsessing over my cat.
+              </p>
+              <a className={classes.button} href="https://github.com/FelicityPictures/Resume/blob/master/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Check out my resume
+              </a>
+            </div>
           </section>
-          <section className={classes.aboutSection}>
+          <section className={[classes.blurb, classes.blurb__extra].join(" ")}>
             <p className={classes.p}>
-              Welcome to my little corner of the internet. I’m a product designer with a background in computer science. I graduated from NYU Tandon in May 2020 with a Bachelor’s in computer science and minors in integrated digital media and game engineering.
-              <br/><br/>
-               I have experience working on enterprise systems and B2B applications during my time as a student UX/UI designer at NYU IT. Optimizing complex systems heavy with business needs while fighting for the experience of the end users is my jam. However, I've been exploring other fields and am currently deep in the e-commerce world, working on the Verizon.com experience with my agency, Publicis Sapient.
+            I believe that everything I do will ultimately come back to inform my work. On that note, some of my interests outside of the typical Figma/Sketch landscape are...
+            <br/>3D modeling
+            <br/>Photography
+            <br/>Web development
+            <br/>Artificial intelligence
+            <br/>Game programming
+            <br/>Cryptocurrency
+            <br/>Painting and other various arts and crafts
+            <br/>Animations
+            <br/>Animal rescue work
             </p>
-          </section>
-          <section className={classes.aboutSection}>
-            <p className={classes.p}>
-              I was born and raised in New York, which has an overpopulation of cats. As they are my favorite animals, I want  do my part to help the overpopulation problem, so in my spare time, I rescue cats. I've only started doing it around the time of the pandemic but my current count of cats personally picked up off the streets and adopted out is 5 and I've TNR'd 10. (Note: This number has probably went up since the last time I've updated this website :P)
-            </p>
-          </section>
-          <section className={classes.aboutSection}>
-            <p className={classes.p}>
-            Learn more about my professional experience more by checking out my resume:
-            </p>
-            <a className={classes.button} href="https://github.com/FelicityPictures/Resume/blob/master/Resume.pdf" target="_blank" rel="noopener noreferrer">
-              Resume!
-            </a>
+              <p className={classes.p}>
+              EXTRA"
+              </p>
           </section>
         </main>
 
