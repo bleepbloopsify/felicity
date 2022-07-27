@@ -14,7 +14,7 @@ const styles = theme => ({
   },
   content:{
     "max-width": "940px",
-    "margin-top": "70px",
+    "margin-top": "100px",
     display: "flex",
     "flex-direction": "column",
     "justify-content": "flex-start",
