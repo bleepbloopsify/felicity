@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const styles = theme => ({
   nav: {
     'width': '100%',
-    "max-height": "70px",
+    // "max-height": "70px",
     'position': 'fixed',
     'top': '0px',
     'left': '0px',
     'box-sizing': 'border-box',
-    'padding': '20px 50px',
+    'padding': '10px 50px',
     'display': 'flex',
     'flex-direction': 'row',
     'justify-content': 'space-between',
@@ -33,6 +33,10 @@ const styles = theme => ({
       "fontSize": "22px",
     },
   },
+  avatar: {
+    width: "50px",
+    height: "auto",
+  },
   nav__rightSide: {
     'display': 'flex',
     'flex-direction': 'row'
@@ -41,10 +45,10 @@ const styles = theme => ({
     "position": "relative",
     'text-decoration': 'none',
     'font-family': "'Karla', sans-serif",
-    'font-weight': 'bold',
+    // 'font-weight': 'bold',
     'font-size': '18px',
     'color': 'black',
-    'margin-left': '55px',
+    'margin-left': '36px',
     "background-color": "rgba(245, 253, 255, 0.5)",
     "border-radius": "100px",
     "padding": "5px 10px",
@@ -77,10 +81,14 @@ class Navbar extends Component {
 
     return (
       <nav className={classes.nav}>
-        <Link className={classes.nav__name} to="/">felicity ng</Link>
+        <Link className={classes.nav__name} to="/">
+          <img alt="Felcity's Logo should be here uwu"
+               className={classes.avatar}
+               src="/felicity_avatar.png" />
+        </Link>
         <div className={classes.nav__rightSide}>
           <Link to="/"className={classes.nav__rightSide__a}>home</Link>
-          <Link to="/about"className={classes.nav__rightSide__a}>about me</Link>
+          <Link to="/about"className={classes.nav__rightSide__a}>about</Link>
         </div>
       </nav>
     );

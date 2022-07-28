@@ -3,55 +3,51 @@ import { withStyles } from '@material-ui/styles';
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    "width": '100%',
     "min-height": '400px',
-    // background: '#F5FDFF',
-    padding: "24px 0px",
+    "padding": "24px 0px",
     "box-sizing": "border-box",
-    display: "flex",
+    "display": "flex",
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
   },
   container: {
-    width: "100%",
-    "max-width": "640px",
-    display: "flex",
-    "flex-direction": "row",
-    "justify-content": "space-between",
-    "align-items": "center",
-  },
-  left: {
-    display: "flex",
+    "width": '640px',
+    "padding": "64px",
+    "box-sizing": "border-box",
+    "display": "flex",
     "flex-direction": "column",
-    "flex-wrap": "nowrap",
+    "justify-content": "center",
+    "align-items": "start",
   },
-  centerText: {
+  nameText: {
     'font-family': "'Itim', cursive",
     'font-style': 'normal',
     'font-weight': 'normal',
-    'font-size': '72px',
+    'font-size': '1.5em',
     "color": "#D772AF",
-    "margin": "0px 0px 8px 0px",
+    "margin": "0px 0px 0px 0px",
     [theme.breakpoints.down('md')]: {
       "font-size": "40px",
     },
   },
-  centerCaption: {
+  centerText: {
     'font-family': 'Muli',
     'font-style': 'normal',
-    'font-size': '18px',
+    'font-size': '1em',
     'font-weight': "bold",
     'color': '#333333',
-    "margin": "8px 0px 0px 0px",
+    "margin": "0px 0px 0px 0px",
     [theme.breakpoints.down('md')]: {
       "font-size": "12px",
     },
   },
-  avatar: {
-    width: "240",
-    height: "auto",
-    // "margin-left": "10px",
+  bottomAlignText: {
+    "display": "flex",
+    "flex-direction": "row",
+    "justify-content": "center",
+    "align-items": "flex-end",
   },
 });
 
@@ -61,20 +57,13 @@ class Jumbotron extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.container}>
-          <div className={classes.left}>
-            <h1 className={classes.centerText}>
-              felicity ng
-            </h1>
-            <p className={classes.centerCaption}>
-              Product Designer
+          <span className={classes.bottomAlignText}>
+            <p className={classes.centerText}>Hi! I'm
+            <b className={classes.nameText}> felicity ng</b>.
             </p>
-          </div>
-
-          <img alt="Felcity's Logo should be here uwu"
-               className={classes.avatar}
-               src="/felicity_avatar.png" />
-
-       </div>
+          </span>
+          <p className={classes.centerText}>A product designer currently working at Publicis Sapient.</p>
+        </div>
       </div>
     );
   }
