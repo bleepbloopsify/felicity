@@ -59,10 +59,10 @@ class Jumbotron extends Component {
         <div className={classes.container}>
           <span className={classes.bottomAlignText}>
             <p className={classes.centerText}>Hi! I'm
-            <b className={classes.nameText}> felicity ng</b>.
+            <b className={classes.nameText}> felicity ng</b>,
             </p>
           </span>
-          <p className={classes.centerText}>A product designer currently working at Publicis Sapient.</p>
+          <p className={classes.centerText}>a product designer currently working at Publicis Sapient.</p>
         </div>
       </div>
     );

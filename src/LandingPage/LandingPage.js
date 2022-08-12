@@ -25,7 +25,6 @@ class LandingPage extends Component {
         <header>
           <Navbar />
         </header>
-        <Jumbotron />
         <Projects />
 
         <Footer />

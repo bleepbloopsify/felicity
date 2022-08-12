@@ -132,9 +132,6 @@ class AboutMe extends Component {
             <br/>Animations
             <br/>Animal rescue work
             </p>
-              <p className={classes.p}>
-              EXTRA"
-              </p>
           </section>
         </main>
 

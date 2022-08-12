@@ -5,22 +5,67 @@ import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   main: {
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "center",
-    "align-items": "center",
-  },
-  projectOverview: {
-    "max-width": "640px",
+    "margin-top": "140px",
+    "width": "100%",
     "box-sizing": "border-box",
+    "display": "grid",
+    "grid-template-columns": "1fr 1fr 1fr 1fr",
+    "grid-template-rows": "auto",
+    "column-gap": "64px",
+    "row-gap": "32px",
+    "padding": "0px 150px",
+  },
+  container: {
+    "grid-column-start": "1",
+    "grid-column-end": "3",
+    "grid-row-start": "1",
+    "grid-row-end": "2",
     "display": "flex",
     "flex-direction": "column",
     "justify-content": "center",
+    "align-items": "start",
+    "padding": "32px",
+  },
+  nameText: {
+    'font-family': "'Itim', cursive",
+    'font-style': 'normal',
+    'font-weight': 'normal',
+    'font-size': '2.5em',
+    "color": "#D772AF",
+    "margin": "0px 0px 0px 0px",
+    [theme.breakpoints.down('md')]: {
+      "font-size": "40px",
+    },
+  },
+  centerText: {
+    'font-family': 'Muli',
+    'font-style': 'normal',
+    'font-size': '2em',
+    'font-weight': "bold",
+    'color': '#333333',
+    "margin": "0px 0px 0px 0px",
+    [theme.breakpoints.down('md')]: {
+      "font-size": "12px",
+    },
+  },
+  bottomAlignText: {
+    "display": "flex",
+    "flex-direction": "row",
+    "justify-content": "center",
+    "align-items": "flex-end",
+  },
+
+  projectOverview: {
+    "max-width": "640px",
+    "align-self": "stretch",
+    "box-sizing": "border-box",
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "flex-start",
     "align-items": "center",
-    "padding": "64px",
+    "padding": "32px",
     "background-color": "#FFF4FB",
     "border-radius": "16px",
-    "margin-bottom": "60px",
     "border": "1px solid #FFF4FB",
     "&:hover": {
        "border": "1px solid #880A56",
@@ -74,6 +119,15 @@ class Projects extends Component {
     const { classes } = this.props;
     return (
       <main className={classes.main}>
+
+        <section className={classes.container}>
+          <span className={classes.bottomAlignText}>
+            <p className={classes.centerText}>Hi! I'm
+            <b className={classes.nameText}> felicity ng</b>,
+            </p>
+          </span>
+          <p className={classes.centerText}>a product designer currently working at Publicis Sapient.</p>
+        </section>
 
         <section className={classes.projectOverview}>
           <img alt="Verizon logo" src="/private_projects/Verizon_mockup.jpg" className={classes.projectOverview__photo}></img>
@@ -150,9 +204,6 @@ class Projects extends Component {
             <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
             <p className={classes.projectOverview__description}>
               Launching the Gizmo Buddy experience.
-            </p>
-            <p className={classes.projectOverview__description}>
-              Not available to the public eye
             </p>
             <h2 className={classes.projectOverview__eyebrows}>
               #ProductDesign

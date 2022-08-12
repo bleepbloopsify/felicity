@@ -52,10 +52,6 @@ const styles = theme => ({
     "background-color": "rgba(245, 253, 255, 0.5)",
     "border-radius": "100px",
     "padding": "5px 10px",
-    [theme.breakpoints.down('md')]: {
-      "fontSize": "12px",
-      'margin-left': '30px',
-    },
     "&:after": {
       "content": "''",
       "position": "absolute",
