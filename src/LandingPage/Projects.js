@@ -129,6 +129,23 @@ class Projects extends Component {
           <p className={classes.centerText}>a product designer currently working at Publicis Sapient.</p>
         </section>
 
+
+        <Link to="/projects/GizmoWatch">
+          <section className={classes.projectOverview}>
+            <img alt="Verizon GizmoWatch 2" src="/GizmoWatch/Title_image.jpg" className={classes.projectOverview__photo}></img>
+
+            <div className={classes.projectOverview__info}>
+              <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
+              <p className={classes.projectOverview__description}>
+                Launching the Gizmo Buddy experience.
+              </p>
+              <h2 className={classes.projectOverview__eyebrows}>
+                #ProductDesign
+              </h2>
+            </div>
+          </section>
+        </Link>
+
         <section className={classes.projectOverview}>
           <img alt="Verizon logo" src="/private_projects/Verizon_mockup.jpg" className={classes.projectOverview__photo}></img>
 
@@ -196,20 +213,6 @@ class Projects extends Component {
             </div>
           </section>
         </Link>
-
-        <section className={classes.projectOverview}>
-          <img alt="Verizon GizmoWatch 2" src="/GizmoWatch/GizmoWatch.jpg" className={classes.projectOverview__photo}></img>
-
-          <div className={classes.projectOverview__info}>
-            <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
-            <p className={classes.projectOverview__description}>
-              Launching the Gizmo Buddy experience.
-            </p>
-            <h2 className={classes.projectOverview__eyebrows}>
-              #ProductDesign
-            </h2>
-          </div>
-        </section>
 
       </main>
     );

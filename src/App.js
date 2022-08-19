@@ -12,6 +12,7 @@ import LandingPage from './LandingPage';
 import CPACS from './projects/CPACS';
 import Packages from './projects/Packages';
 import Scribble from './projects/Scribble';
+import GizmoWatch from './projects/GizmoWatch';
 import ScrollToTopRouter from './ScrollToTopRouter';
 
 const theme = createMuiTheme({
@@ -62,6 +63,7 @@ function App() {
         <ScrollToTopRouter path={CPACS.PROJECT_LINK} component={CPACS} />
         <ScrollToTopRouter path={Packages.PROJECT_LINK} component={Packages} />
         <ScrollToTopRouter path={Scribble.PROJECT_LINK} component={Scribble} />
+        <ScrollToTopRouter path={GizmoWatch.PROJECT_LINK} component={GizmoWatch} />
       </Router>
     </ThemeProvider>
   );
