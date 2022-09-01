@@ -72,9 +72,9 @@ const styles = theme => ({
   }
 });
 
-class Packages extends Component {
+class GizmoWatch extends Component {
   static PROJECT_NAME = 'CPACS';
-  static PROJECT_LINK = '/projects/packages';
+  static PROJECT_LINK = '/projects/gizmowatch';
 
   render() {
     const { classes } = this.props;
@@ -186,4 +186,4 @@ class Packages extends Component {
   }
 }
 
-export default withStyles(styles)(Packages);
+export default withStyles(styles)(GizmoWatch);

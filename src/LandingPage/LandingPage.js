@@ -22,9 +22,6 @@ class LandingPage extends Component {
   render() {
     return (
       <div>
-        <header>
-          <Navbar />
-        </header>
         <Projects />
 
         <Footer />

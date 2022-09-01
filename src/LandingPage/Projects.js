@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   main: {
-    "margin-top": "140px",
+    "margin-top": "0px",
     "width": "100%",
     "box-sizing": "border-box",
     "display": "grid",
-    "grid-template-columns": "1fr 1fr 1fr 1fr",
+    "grid-template-columns": "repeat(4, 1fr)",
     "grid-template-rows": "auto",
     "column-gap": "64px",
     "row-gap": "32px",
-    "padding": "0px 150px",
+    "padding": "50px 150px",
   },
   container: {
     "grid-column-start": "1",
@@ -59,14 +59,14 @@ const styles = theme => ({
     "max-width": "640px",
     "align-self": "stretch",
     "box-sizing": "border-box",
-    "display": "flex",
-    "flex-direction": "column",
-    "justify-content": "flex-start",
-    "align-items": "center",
     "padding": "32px",
     "background-color": "#FFF4FB",
     "border-radius": "16px",
     "border": "1px solid #FFF4FB",
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "flex-start",
+    "align-items": "center",
     "&:hover": {
        "border": "1px solid #880A56",
        "box-shadow": "0px 4px 12px 0px #880A5625",
@@ -127,11 +127,11 @@ class Projects extends Component {
             </p>
           </span>
           <p className={classes.centerText}>a product designer currently working at Publicis Sapient.</p>
+          <button>About me</button>
         </section>
 
 
-        <Link to="/projects/GizmoWatch">
-          <section className={classes.projectOverview}>
+        <Link to="/projects/GizmoWatch" className={classes.projectOverview}>
             <img alt="Verizon GizmoWatch 2" src="/GizmoWatch/Title_image.jpg" className={classes.projectOverview__photo}></img>
 
             <div className={classes.projectOverview__info}>
@@ -143,7 +143,6 @@ class Projects extends Component {
                 #ProductDesign
               </h2>
             </div>
-          </section>
         </Link>
 
         <section className={classes.projectOverview}>
@@ -160,12 +159,13 @@ class Projects extends Component {
           </div>
         </section>
 
-        <Link to="/projects/packages">
-          <section className={classes.projectOverview}>
+        <Link to="/projects/packages" className={classes.projectOverview}>
             <img alt="Packages mockup" src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo} />
 
             <div className={classes.projectOverview__info}>
-              <h1 className={classes.projectOverview__title}>NYU faculty housing's Packages app</h1>
+              <h1 className={classes.projectOverview__title}>
+              NYU faculty housing's Packages app
+              </h1>
               <p className={classes.projectOverview__description}>
                 Converting a manual, paper-based process for managing mail room inventory in NYU faculty housing and converting it into a streamlined digital system.
               </p>
@@ -173,12 +173,10 @@ class Projects extends Component {
                 #ProductDesign #UX/UI #Engineering #UserResearch
               </h2>
             </div>
-          </section>
         </Link>
 
 
-        <Link to="/projects/cpacs">
-          <section className={classes.projectOverview}>
+        <Link to="/projects/cpacs" className={classes.projectOverview}>
             <img alt="Cpacs mockup" src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo} />
 
             <div className={classes.projectOverview__info}>
@@ -192,12 +190,10 @@ class Projects extends Component {
                 #ProductDesign #UX/UI #UserResearch
               </h2>
             </div>
-          </section>
         </Link>
 
 
-        <Link to="/projects/scribblenyc">
-          <section className={classes.projectOverview}>
+        <Link to="/projects/scribblenyc" className={classes.projectOverview}>
             <img alt="Scribble Mockup" src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
             <div className={classes.projectOverview__info}>
@@ -211,7 +207,6 @@ class Projects extends Component {
                 #DesignAThonFounder #Branding #Engineering
               </h2>
             </div>
-          </section>
         </Link>
 
       </main>
