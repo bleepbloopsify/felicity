@@ -1,25 +1,34 @@
 import { withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
 
 
 const styles = theme => ({
   main: {
+    'width': "100%",
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "flex-start",
+    "align-items": "center",
+  },
+  nav: {
     "margin-top": "0px",
-    "width": "100%",
+    "width": "90%",
     "box-sizing": "border-box",
+    "padding": "50px 0px",
     "display": "grid",
     "grid-template-columns": "repeat(4, 1fr)",
     "grid-template-rows": "auto",
     "column-gap": "64px",
     "row-gap": "32px",
-    "padding": "50px 150px",
   },
   container: {
+    "min-width": "100%",
     "grid-column-start": "1",
     "grid-column-end": "3",
-    "grid-row-start": "1",
-    "grid-row-end": "2",
+    "width": "100%",
+    "box-sizing": "border-box",
     "display": "flex",
     "flex-direction": "column",
     "justify-content": "center",
@@ -56,6 +65,8 @@ const styles = theme => ({
   },
 
   projectOverview: {
+    "position": "relative",
+    "min-width": "100%",
     "max-width": "640px",
     "align-self": "stretch",
     "box-sizing": "border-box",
@@ -65,25 +76,30 @@ const styles = theme => ({
     "border": "1px solid #FFF4FB",
     "display": "flex",
     "flex-direction": "column",
-    "justify-content": "flex-start",
-    "align-items": "center",
+    "justify-content": "space-between",
+    "align-items": "flex-start",
+    "color": "#000",
     "&:hover": {
        "border": "1px solid #880A56",
        "box-shadow": "0px 4px 12px 0px #880A5625",
+       "background-color": "#880A56",
+       "color": "#FFF",
+       "transition": ".25s ease",
+       "& > h2": {
+         "color": "#FFF",
+         "transition": ".25s ease",
+       },
     },
-    // [theme.breakpoints.down('md')]: {
-    //   "width": "100%",
-    //   "padding": "0px 10px",
-    //   "display": "flex",
-    //   "justify-content": "center",
-    //   "align-items": "center",
-    //   "flex-direction": "column",
-    //   "box-sizing": "border-box",
-    //   "margin": "20px 0px",
-    // },
   },
   projectOverview__info: {
-    width: "100%",
+    "width": "100%",
+  },
+  projectOverview__info__top: {
+    "width": "100%",
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "flex-start",
+    "align-content": "center",
   },
   projectOverview__title: {
     "margin": "0px",
@@ -94,24 +110,103 @@ const styles = theme => ({
   projectOverview__description: {
     "font-family": "'Muli', sans-serif",
     "font-weight": "bold",
-    "font-size": "1em",
+    "font-size": "1.25em",
     "margin": "0em 0em 3em 0em",
-    // [theme.breakpoints.down('md')]: {
-    //   "margin": "15px 0px",
-    // },
   },
   projectOverview__eyebrows: {
     "all": "unset",
     "font-family": "'Muli', sans-serif",
     "font-weight": "bold",
-    "font-size": "12px",
+    "font-size": "0.75em",
     "color": "#880A56",
   },
   projectOverview__photo: {
     "width": "100%",
-    "height": "auto",
+    "height": "300px",
     "margin-bottom": "2em",
-  }
+    "object-fit": "cover",
+  },
+
+  footerContainer: {
+    "width": "100%",
+    "height": "100%",
+    "display": "flex",
+    "flex-direction": "column",
+    "justify-content": "center",
+    "align-items": "center",
+  },
+  icon_group: {
+    "width": "100px",
+    "margin-top": "24px",
+    "display": "flex",
+    "flex-direction": "row",
+    "justify-content": "space-between",
+    "align-items": "center",
+    "padding": "0px 30px",
+    [theme.breakpoints.down('md')]: {
+      "width": "30%",
+      "display": "flex",
+      "flex-direction": "row",
+      "justify-content": "space-between",
+    },
+  },
+  footer__icon: {
+    "width": "32px",
+    "height": "auto",
+      [theme.breakpoints.down('md')]: {
+        "margin-left": "0px","position": "absolute",
+    "top": "0",
+    "bottom": "0",
+    "left": "0",
+    "right": "0",
+    "height": "100%",
+    "width": "100%",
+    "opacity": "0",
+    "transition": ".5s ease",
+    "background-color": "#008CBA",
+      },
+  },
+  overlay: {
+    "position": "absolute",
+    "top": "0",
+    "bottom": "0",
+    "left": "0",
+    "right": "0",
+    "height": "100%",
+    "width": "100%",
+    "opacity": "0",
+    "transition": ".5s ease",
+    "background-color": "rgba(136, 10, 86, 0.9);",
+    "border-radius": "15px",
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+    "&:hover": {
+      "opacity": "1",
+    },
+  },
+  overlay__text: {
+    "color": "#FFF",
+    "font-family": "'Muli', sans-serif",
+    "font-size": "1em",
+  },
+  button: {
+    "all": "unset",
+    "font-family": "'Muli', sans-serif",
+    "font-weight": "bold",
+    "font-size": "1em",
+    "background-color": "#880A56",
+    "color": "white",
+    "text-align": "center",
+    "width": "140px",
+    "padding": "8px 0px",
+    "border-radius": "50px",
+    "margin": "24px 0px 0px 0px",
+    "&:hover": {
+      "background-color": "#D772AF",
+      "color": "black",
+    }
+  },
 })
 
 class Projects extends Component {
@@ -119,6 +214,7 @@ class Projects extends Component {
     const { classes } = this.props;
     return (
       <main className={classes.main}>
+      <nav className={classes.nav}>
 
         <section className={classes.container}>
           <span className={classes.bottomAlignText}>
@@ -127,39 +223,87 @@ class Projects extends Component {
             </p>
           </span>
           <p className={classes.centerText}>a product designer currently working at Publicis Sapient.</p>
-          <button>About me</button>
+          <Link to="/about">
+            <button className={classes.button}>About me</button>
+          </Link>
         </section>
 
 
-        <Link to="/projects/GizmoWatch" className={classes.projectOverview}>
+        <section to="/projects/GizmoWatch" className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
             <img alt="Verizon GizmoWatch 2" src="/GizmoWatch/Title_image.jpg" className={classes.projectOverview__photo}></img>
 
             <div className={classes.projectOverview__info}>
-              <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
-              <p className={classes.projectOverview__description}>
-                Launching the Gizmo Buddy experience.
-              </p>
-              <h2 className={classes.projectOverview__eyebrows}>
-                #ProductDesign
-              </h2>
+                <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
+                <p className={classes.projectOverview__description}>
+                  Creating a smartwatch to ease children into the world of technology.
+                </p>
+              </div>
             </div>
-        </Link>
+              <h2 className={classes.projectOverview__eyebrows}>
+                #ComingSoon
+              </h2>
+              <div className={classes.overlay}>
+                <p className={classes.overlay__text}>Coming soon</p>
+              </div>
+        </section>
 
         <section className={classes.projectOverview}>
-          <img alt="Verizon logo" src="/private_projects/Verizon_mockup.jpg" className={classes.projectOverview__photo}></img>
+          <div className={classes.projectOverview__info__top}>
+            <img alt="Skolem logo" src="/private_projects/Skolem.png" className={classes.projectOverview__photo}></img>
 
-          <div className={classes.projectOverview__info}>
-            <h1 className={classes.projectOverview__title}>Verizon.com Shop</h1>
-            <p className={classes.projectOverview__description}>
-              Improve the verizon.com e-commerce experience to increase conversion.
-            </p>
-            <h2 className={classes.projectOverview__eyebrows}>
-              #UX/UI #UserResearch #Strategy #DesignAuditing
-            </h2>
+            <div className={classes.projectOverview__info}>
+              <h1 className={classes.projectOverview__title}>Skolem Technologies's blockchain wallet</h1>
+              <p className={classes.projectOverview__description}>
+                Completing transactions on the blockchain wallet.
+              </p>
+            </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #ComingSoon
+          </h2>
+          <div className={classes.overlay}>
+            <p className={classes.overlay__text}>Coming soon</p>
           </div>
         </section>
 
+        <section className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
+            <img alt="Verizon logo" src="/private_projects/Verizon_Shop.png" className={classes.projectOverview__photo}></img>
+
+            <div className={classes.projectOverview__info}>
+              <h1 className={classes.projectOverview__title}>Verizon's eCommerce experience</h1>
+              <p className={classes.projectOverview__description}>
+                Improving the verizon.com e-commerce experience to increase conversion.
+              </p>
+            </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #ComingSoon
+          </h2>
+          <div className={classes.overlay}>
+            <p className={classes.overlay__text}>Coming soon</p>
+          </div>
+        </section>
+
+        <Link to={{ pathname: "https://drive.google.com/file/d/1Thpn-iA0RjURqk0rym8_CItwwikX_Mx_/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
+            <img alt="Sprouts" src="/private_projects/Sprouts.jpg" className={classes.projectOverview__photo}></img>
+
+            <div className={classes.projectOverview__info}>
+              <h1 className={classes.projectOverview__title}>Sprouts In-Store Experience</h1>
+              <p className={classes.projectOverview__description}>
+                Marrying the Sprouts online platform with the in-store experience to make navigating grocery shores more efficient in the post-pandemic age.
+              </p>
+            </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #UX/UI #UserResearch #Strategy
+          </h2>
+        </Link>
+
         <Link to="/projects/packages" className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
             <img alt="Packages mockup" src="/Packages/Packages_mockup.jpeg" className={classes.projectOverview__photo} />
 
             <div className={classes.projectOverview__info}>
@@ -169,14 +313,16 @@ class Projects extends Component {
               <p className={classes.projectOverview__description}>
                 Converting a manual, paper-based process for managing mail room inventory in NYU faculty housing and converting it into a streamlined digital system.
               </p>
-              <h2 className={classes.projectOverview__eyebrows}>
-                #ProductDesign #UX/UI #Engineering #UserResearch
-              </h2>
             </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #ProductDesign #UX/UI #Engineering #UserResearch
+          </h2>
         </Link>
 
 
         <Link to="/projects/cpacs" className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
             <img alt="Cpacs mockup" src="/CPACSweb/CPACS_mockup.jpg" className={classes.projectOverview__photo} />
 
             <div className={classes.projectOverview__info}>
@@ -186,14 +332,16 @@ class Projects extends Component {
               <p className={classes.projectOverview__description}>
                 It started off as a redesign of the current system but with more user research, the focus of the project shifted to improving the system that we already have.
               </p>
-              <h2 className={classes.projectOverview__eyebrows}>
-                #ProductDesign #UX/UI #UserResearch
-              </h2>
             </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #ProductDesign #UX/UI #UserResearch
+          </h2>
         </Link>
 
 
         <Link to="/projects/scribblenyc" className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
             <img alt="Scribble Mockup" src="/Scribble/centered_swag.jpg" className={classes.projectOverview__photo}></img>
 
             <div className={classes.projectOverview__info}>
@@ -203,12 +351,29 @@ class Projects extends Component {
                 and high school students to expose them to the world of product
                 design.
               </p>
-              <h2 className={classes.projectOverview__eyebrows}>
-                #DesignAThonFounder #Branding #Engineering
-              </h2>
             </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+            #DesignAThonFounder #Branding #Engineering
+          </h2>
         </Link>
 
+        <footer className={classes.footerContainer}>
+          <Typography variant="h1" color="primary">
+            felicity ng
+          </Typography>
+          <div className={classes.icon_group}>
+            <a href="mailto: felicity.ng@nyu.edu">
+              <img alt="email icon" src="/email_icon.png" className={classes.footer__icon}></img>
+            </a>
+
+            <a href="https://www.linkedin.com/in/felicity-ng/" target="_blank" rel="noopener noreferrer">
+              <img alt="linkedin icon" src="/linkedin_icon.png" className={classes.footer__icon}></img>
+            </a>
+          </div>
+        </footer>
+
+        </nav>
       </main>
     );
   }
