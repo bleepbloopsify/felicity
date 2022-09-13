@@ -18,15 +18,21 @@ const styles = theme => ({
     "box-sizing": "border-box",
     "padding": "50px 0px",
     "display": "grid",
-    "grid-template-columns": "repeat(4, 1fr)",
+    "grid-template-columns": "repeat(2, 1fr)",
     "grid-template-rows": "auto",
     "column-gap": "64px",
     "row-gap": "32px",
+    [theme.breakpoints.up('xl')]: {
+      "grid-template-columns": "repeat(4, 1fr)",
+    },
+    [theme.breakpoints.down('sm')]: {
+      "grid-template-columns": "repeat(1, 1fr)",
+    },
   },
   container: {
     "min-width": "100%",
     "grid-column-start": "1",
-    "grid-column-end": "3",
+    "grid-column-end": "2",
     "width": "100%",
     "box-sizing": "border-box",
     "display": "flex",
@@ -34,6 +40,9 @@ const styles = theme => ({
     "justify-content": "center",
     "align-items": "start",
     "padding": "32px",
+    [theme.breakpoints.up('xl')]: {
+      "grid-column-end": "3",
+    },
   },
   nameText: {
     'font-family': "'Itim', cursive",
@@ -42,9 +51,6 @@ const styles = theme => ({
     'font-size': '2.5em',
     "color": "#D772AF",
     "margin": "0px 0px 0px 0px",
-    [theme.breakpoints.down('md')]: {
-      "font-size": "40px",
-    },
   },
   centerText: {
     'font-family': 'Muli',
@@ -53,9 +59,6 @@ const styles = theme => ({
     'font-weight': "bold",
     'color': '#333333',
     "margin": "0px 0px 0px 0px",
-    [theme.breakpoints.down('md')]: {
-      "font-size": "12px",
-    },
   },
   bottomAlignText: {
     "display": "flex",
@@ -129,11 +132,20 @@ const styles = theme => ({
 
   footerContainer: {
     "width": "100%",
+    "min-height": "100px",
     "height": "100%",
     "display": "flex",
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
+    "box-sizing": "border-box",
+    "padding": "32px",
+    "border-radius": "16px",
+    // "border": "1px solid #880A56",
+    "background-image": 'url("/heart_icon.png")',
+    "background-repeat": "no-repeat",
+    "background-position": "center",
+    "background-size": "150px 150px",
   },
   icon_group: {
     "width": "100px",
@@ -143,28 +155,10 @@ const styles = theme => ({
     "justify-content": "space-between",
     "align-items": "center",
     "padding": "0px 30px",
-    [theme.breakpoints.down('md')]: {
-      "width": "30%",
-      "display": "flex",
-      "flex-direction": "row",
-      "justify-content": "space-between",
-    },
   },
   footer__icon: {
     "width": "32px",
     "height": "auto",
-      [theme.breakpoints.down('md')]: {
-        "margin-left": "0px","position": "absolute",
-    "top": "0",
-    "bottom": "0",
-    "left": "0",
-    "right": "0",
-    "height": "100%",
-    "width": "100%",
-    "opacity": "0",
-    "transition": ".5s ease",
-    "background-color": "#008CBA",
-      },
   },
   overlay: {
     "position": "absolute",
