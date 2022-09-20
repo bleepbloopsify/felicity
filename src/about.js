@@ -19,9 +19,8 @@ const styles = theme => ({
     "flex-direction": "column",
     "justify-content": "flex-start",
     "align-items": "center",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       "width": "100%",
-      "padding": "70px 0px 0px 0px",
       "box-sizing": "border-box",
     },
   },
@@ -32,10 +31,10 @@ const styles = theme => ({
     "justify-content": "flex-start",
     "align-items": "flex-start",
     "padding": "0px",
-    [theme.breakpoints.down('md')]: {
-      "width": "100%",
+    [theme.breakpoints.down('sm')]: {
       "padding": "0px 20px",
       "box-sizing": "border-box",
+      "flex-direction": "column",
     },
   },
   blurb__extra:{
@@ -51,6 +50,10 @@ const styles = theme => ({
     width: "300px",
     height: "auto",
     "margin-right": "24px",
+    [theme.breakpoints.down('sm')]: {
+      "width": "75%",
+      "margin-bottom": "40px",
+    },
   },
   h1: {
     "font-family": "'Karla', sans-serif",

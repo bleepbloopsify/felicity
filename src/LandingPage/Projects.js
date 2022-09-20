@@ -132,7 +132,7 @@ const styles = theme => ({
 
   footerContainer: {
     "width": "100%",
-    "min-height": "100px",
+    "min-height": "200px",
     "height": "100%",
     "display": "flex",
     "flex-direction": "column",
@@ -141,7 +141,6 @@ const styles = theme => ({
     "box-sizing": "border-box",
     "padding": "32px",
     "border-radius": "16px",
-    // "border": "1px solid #880A56",
     "background-image": 'url("/heart_icon.png")',
     "background-repeat": "no-repeat",
     "background-position": "center",

@@ -4,20 +4,20 @@ import { Typography, withStyles } from '@material-ui/core';
 const styles = theme => ({
   root: {
     "width": "100%",
-    height: "auto",
+    "min-height": "200px",
     // "background-color": "#F5FDFF",
-    "padding": "24px 100px",
-    display: "flex",
+    "padding": "32px",
+    "display": "flex",
     "flex-direction": "column",
-    "justify-content": "flex-start",
+    "justify-content": "center",
     "align-items": "center",
     "box-sizing": "border-box",
     "margin-top": "64px",
-    [theme.breakpoints.down('md')]: {
-      "flex-direction": "column",
-      "height": "auto",
-      "padding": "35px 20px 20px 20px",
-    },
+    "margin-bottom": "120px",
+    "background-image": 'url("/heart_icon.png")',
+    "background-repeat": "no-repeat",
+    "background-position": "center",
+    "background-size": "150px 150px",
   },
   icon_group: {
     "width": "100px",
@@ -27,19 +27,10 @@ const styles = theme => ({
     "justify-content": "space-between",
     "align-items": "center",
     "padding": "0px 30px",
-    [theme.breakpoints.down('md')]: {
-      "width": "30%",
-      "display": "flex",
-      "flex-direction": "row",
-      "justify-content": "space-between",
-    },
   },
   footer__icon: {
-    width: "32px",
-    height: "auto",
-      [theme.breakpoints.down('md')]: {
-        "margin-left": "0px",
-      },
+    "width": "32px",
+    "height": "auto",
   }
 });
 
