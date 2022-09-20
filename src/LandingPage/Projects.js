@@ -235,7 +235,7 @@ class Projects extends Component {
               </div>
             </div>
               <h2 className={classes.projectOverview__eyebrows}>
-                #ComingSoon
+                #productDesign #wearables #mobile #userResearch #COPPACompliant
               </h2>
               <div className={classes.overlay}>
                 <p className={classes.overlay__text}>Coming soon</p>
@@ -254,14 +254,14 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #ComingSoon
+            #crypto #wallet #blockchain
           </h2>
           <div className={classes.overlay}>
             <p className={classes.overlay__text}>Coming soon</p>
           </div>
         </section>
 
-        <section className={classes.projectOverview}>
+        <Link to={{ pathname: "https://drive.google.com/file/d/1ADmEgcYjF04I9ZzWN04PiXcM-y48gHU1/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
             <img alt="Verizon logo" src="/private_projects/Verizon_Shop.png" className={classes.projectOverview__photo}></img>
 
@@ -273,12 +273,9 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #ComingSoon
+            #UX/UI #eCommerce #audit #strategy
           </h2>
-          <div className={classes.overlay}>
-            <p className={classes.overlay__text}>Coming soon</p>
-          </div>
-        </section>
+        </Link>
 
         <Link to={{ pathname: "https://drive.google.com/file/d/1Thpn-iA0RjURqk0rym8_CItwwikX_Mx_/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
@@ -292,7 +289,7 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #UX/UI #UserResearch #Strategy
+            #UX/UI #userResearch #strategy #eCommerce
           </h2>
         </Link>
 
@@ -310,7 +307,7 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #ProductDesign #UX/UI #Engineering #UserResearch
+            #productDesign #B2B #UX/UI #engineering #userResearch
           </h2>
         </Link>
 
@@ -329,7 +326,7 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #ProductDesign #UX/UI #UserResearch
+            #productDesign #B2B #UX/UI #userResearch
           </h2>
         </Link>
 
@@ -348,7 +345,7 @@ class Projects extends Component {
             </div>
           </div>
           <h2 className={classes.projectOverview__eyebrows}>
-            #DesignAThonFounder #Branding #Engineering
+            #designAThonFounder #branding #engineering
           </h2>
         </Link>
 
