@@ -222,9 +222,9 @@ class Projects extends Component {
         </section>
 
 
-        <section to="/projects/GizmoWatch" className={classes.projectOverview}>
+        <Link to={{ pathname: "https://drive.google.com/file/d/1JVfQGTO5y2EK7SKcA-tYG5OLba8U3ajY/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
-            <img alt="Verizon GizmoWatch 2" src="/GizmoWatch/Title_image.jpg" className={classes.projectOverview__photo}></img>
+            <img alt="Verizon GizmoWatch 3" src="/GizmoWatch/Title_image.jpg" className={classes.projectOverview__photo}></img>
 
             <div className={classes.projectOverview__info}>
                 <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
@@ -233,13 +233,10 @@ class Projects extends Component {
                 </p>
               </div>
             </div>
-              <h2 className={classes.projectOverview__eyebrows}>
-                #productDesign #wearables #mobile #userResearch #COPPACompliant
-              </h2>
-              <div className={classes.overlay}>
-                <p className={classes.overlay__text}>Coming soon</p>
-              </div>
-        </section>
+            <h2 className={classes.projectOverview__eyebrows}>
+              #productDesign #wearables #mobile #userResearch #COPPACompliant
+            </h2>
+          </Link>
 
         <section className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
