@@ -234,28 +234,9 @@ class Projects extends Component {
               </div>
             </div>
             <h2 className={classes.projectOverview__eyebrows}>
-              #productDesign #wearables #mobile #userResearch #COPPACompliant
+              #wearables #mobile #userResearch #COPPACompliant
             </h2>
           </Link>
-
-        <section className={classes.projectOverview}>
-          <div className={classes.projectOverview__info__top}>
-            <img alt="Skolem logo" src="/private_projects/Skolem.png" className={classes.projectOverview__photo}></img>
-
-            <div className={classes.projectOverview__info}>
-              <h1 className={classes.projectOverview__title}>Skolem Technologies's blockchain wallet</h1>
-              <p className={classes.projectOverview__description}>
-                Completing transactions on the blockchain wallet.
-              </p>
-            </div>
-          </div>
-          <h2 className={classes.projectOverview__eyebrows}>
-            #crypto #wallet #blockchain
-          </h2>
-          <div className={classes.overlay}>
-            <p className={classes.overlay__text}>Coming soon</p>
-          </div>
-        </section>
 
         <Link to={{ pathname: "https://drive.google.com/file/d/1ADmEgcYjF04I9ZzWN04PiXcM-y48gHU1/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
@@ -272,7 +253,7 @@ class Projects extends Component {
             #UX/UI #eCommerce #audit #strategy
           </h2>
         </Link>
-
+{/*
         <Link to={{ pathname: "https://drive.google.com/file/d/1Thpn-iA0RjURqk0rym8_CItwwikX_Mx_/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
             <img alt="Sprouts" src="/private_projects/Sprouts.jpg" className={classes.projectOverview__photo}></img>
@@ -288,6 +269,7 @@ class Projects extends Component {
             #UX/UI #userResearch #strategy #eCommerce
           </h2>
         </Link>
+*/}
 
         <Link to="/projects/packages" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
@@ -298,7 +280,7 @@ class Projects extends Component {
               NYU faculty housing's Packages app
               </h1>
               <p className={classes.projectOverview__description}>
-                Converting a manual, paper-based process for managing mail room inventory in NYU faculty housing and converting it into a streamlined digital system.
+                Taking a manual, paper-based process for managing mail room inventory in NYU faculty housing and converting it into a streamlined digital system.
               </p>
             </div>
           </div>
