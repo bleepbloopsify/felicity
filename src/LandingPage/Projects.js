@@ -229,14 +229,33 @@ class Projects extends Component {
             <div className={classes.projectOverview__info}>
                 <h1 className={classes.projectOverview__title}>Verizon GizmoWatch</h1>
                 <p className={classes.projectOverview__description}>
-                  Creating a smartwatch to ease children into the world of technology.
+                  Creating a peer-based social feature for a children's smartwatch.
                 </p>
               </div>
             </div>
             <h2 className={classes.projectOverview__eyebrows}>
-              #wearables #mobile #userResearch #COPPACompliant
+              #wearables #mobile #COPPACompliant
             </h2>
           </Link>
+
+          <section className={classes.projectOverview}>
+          <div className={classes.projectOverview__info__top}>
+            <img alt="Skolem logo" src="/private_projects/GizmoHub.png" className={classes.projectOverview__photo}></img>
+
+            <div className={classes.projectOverview__info}>
+              <h1 className={classes.projectOverview__title}>Verizon GizmoHub</h1>
+              <p className={classes.projectOverview__description}>
+              Expanding and enhancing the existing School/Quiet mode feature.
+              </p>
+            </div>
+          </div>
+          <h2 className={classes.projectOverview__eyebrows}>
+              #wearables #mobile #journeyMap #customerFeedback
+          </h2>
+          <div className={classes.overlay}>
+            <p className={classes.overlay__text}>Available upon request</p>
+          </div>
+        </section>
 
         <Link to={{ pathname: "https://drive.google.com/file/d/1ADmEgcYjF04I9ZzWN04PiXcM-y48gHU1/view?usp=sharing" }} target="_blank" className={classes.projectOverview}>
           <div className={classes.projectOverview__info__top}>
@@ -245,7 +264,7 @@ class Projects extends Component {
             <div className={classes.projectOverview__info}>
               <h1 className={classes.projectOverview__title}>Verizon's eCommerce experience</h1>
               <p className={classes.projectOverview__description}>
-                Improving the verizon.com e-commerce experience to increase conversion.
+                Redesigning the compare bar on the Verizon website to increase conversion.
               </p>
             </div>
           </div>
