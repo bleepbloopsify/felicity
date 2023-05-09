@@ -113,13 +113,13 @@ class AboutMe extends Component {
             <div className={classes.blurb__text}>
               <h1 className={classes.h1}>Hey! Felicity here.</h1>
               <p className={classes.p}>
-                I am a product designer, proudly hailing from New York City. My academic background in computer science and love for design places me in a unique position as a bridge between designers and developers. I relish sinking my teeth into intricate design challenges while still keeping a light-hearted approach to problem-solving. When not meticulously streamlining complex user flows, you can find me in the kitchen, planning my next dinner party.
+                I am a product designer, proudly hailing from New York City. My academic background in computer science and love for design places me in a unique position as the bridge between designers and developers. I relish sinking my teeth into intricate design challenges while still keeping a light-hearted approach to problem-solving. When not meticulously streamlining complex user flows, you can find planning my next dinner party.
               </p>
             </div>
           </section>
           <section className={[classes.blurb, classes.blurb__extra].join(" ")}>
             <p className={classes.p}>
-            I strongly believe that all of my experiences, including my personal interests, contribute to my growth as a designer. Beyond my proficiency in Figma and Sketch, I have a diverse set of hobbies that inspire my creativity and inform my design decisions, such as web development, game programming, digital art, and mermaiding (yes, you read that correctly. Mermaiding). Additionally, I am involved in animal rescue work, which I find to be both rewarding and fulfilling. These interests provide me with a unique perspective that allows me to approach design challenges from a variety of angles and deliver innovative solutions.
+            I strongly believe that all of my experiences, including my personal interests, contribute to my growth as a designer. Beyond my proficiency in Figma and Sketch, I have a diverse set of hobbies that inspire my creativity and inform my design decisions, such as web development, game programming, digital art, and mermaiding. Additionally, I am involved in animal rescue work, which I find to be both rewarding and fulfilling. These interests provide me with a unique perspective that allows me to approach design challenges from a variety of angles and deliver innovative solutions.
             </p>
           </section>
 
